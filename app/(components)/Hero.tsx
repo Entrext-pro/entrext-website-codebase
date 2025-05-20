@@ -1,25 +1,15 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import Notebook from "@/public/notebook.jpg"
+import { motion } from "framer-motion";
+import Notebook from "@/public/notebook.jpg";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const line1 = "ENTERING";
 const line2 = "THE NEXT ERA";
 
 export default function Hero() {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
     const isMobile = useIsMobile();
-    const height = useTransform(
-        scrollYProgress,
-        [0, 1],
-        isMobile ? ["300px", "100px"] : ["900px", "400px"]
-    );
 
     return (
         <div>
@@ -42,7 +32,7 @@ export default function Hero() {
                                             type: "spring",
                                             stiffness: 120,
                                             damping: 20,
-                                            delay: index * 0.05,
+                                            delay: index * 0.02,
                                         },
                                     },
                                 }}
@@ -52,7 +42,7 @@ export default function Hero() {
                         ))}
                     </div>
 
-                    <div className="flex ">
+                    <div className="flex">
                         {line2.split("").map((char, index) => (
                             <motion.span
                                 key={`line2-${index}`}
@@ -69,7 +59,7 @@ export default function Hero() {
                                             type: "spring",
                                             stiffness: 120,
                                             damping: 20,
-                                            delay: (line1.length + index) * 0.05, // continue delay from line1
+                                            delay: (line1.length + index) * 0.02,
                                         },
                                     },
                                 }}
@@ -81,18 +71,13 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="block border border-dashed ">
-                <motion.div
-                    ref={ref}
-                    className="block border border-dashedoverflow-hidden"
-                    style={{ height }}
-                >
-                    <Image
-                        className="w-full h-full object-cover"
-                        alt="Notebook"
-                        src={Notebook}
-                    />
-                </motion.div>
+            <div className="relative overflow-hidden w-full h-[200px] md:h-[400px] lg:h-[600px]">
+                <Image
+                    priority
+                    className="w-full h-full object-cover"
+                    alt="Notebook"
+                    src={Notebook}
+                />
             </div>
         </div>
     );
