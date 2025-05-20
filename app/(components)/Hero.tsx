@@ -32,7 +32,7 @@ export default function Hero() {
                                             type: "spring",
                                             stiffness: 120,
                                             damping: 20,
-                                            delay: index * 0.05,
+                                            delay: index * 0.1,
                                         },
                                     },
                                 }}
@@ -59,7 +59,7 @@ export default function Hero() {
                                             type: "spring",
                                             stiffness: 120,
                                             damping: 20,
-                                            delay: (line1.length + index) * 0.05,
+                                            delay: (line1.length + index) * 0.1,
                                         },
                                     },
                                 }}
