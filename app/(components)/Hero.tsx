@@ -13,7 +13,7 @@ export default function Hero() {
 
     return (
         <div>
-            <div className="mt-[90px] md:h-[500px] h-[120px] overflow-hidden">
+            <div className="md:mt-[90px] mt-[70px] md:h-[500px] h-[120px] overflow-hidden">
                 <div className="text-[50px] sm:text-[120px] md:text-[160px] lg:text-[200px] xl:text-[210px] font-[1000] leading-[1] tracking-tight">
                     <div className="flex flex-wrap">
                         {line1.split("").map((char, index) => (
