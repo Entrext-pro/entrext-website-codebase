@@ -45,7 +45,8 @@
 
 body {
   margin:8px;
-  height: 300vh;
+  height: 1000vh;
+
 }
 
 @media (min-width: 768px) {

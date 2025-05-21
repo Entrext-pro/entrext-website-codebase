@@ -16,39 +16,44 @@ export default function SubHero() {
 
     return (
         <div className="mt-10" ref={ref}>
-            <motion.div
-                className="w-full flex justify-end md:text-3xl text-sm md:text-left text-right"
-                initial="hidden"
-                animate={controls}
-                variants={fadeFromRight}
-            >
-                <div className="w-2xl flex">
-                    <div className="font-[500] uppercase md:mt-0 mt-[20px]">
-                        A product studio ☴ that turns everyday problems into smart,
-                        useful apps and tools
-                        <div className="inline ml-2">
-                            [Logo]
+            <div className="overflow-hidden">
+                <motion.div
+                    className="w-full flex justify-end md:text-3xl text-sm md:text-left text-right"
+                    initial="hidden"
+                    animate={controls}
+                    variants={fadeFromRight}
+                >
+                    <div className="w-2xl flex">
+                        <div className="font-[500] uppercase md:mt-0 mt-[20px]">
+                            A product studio ☴ that turns everyday problems into smart,
+                            useful apps and tools
+                            <div className="inline ml-2">
+                                [Logo]
+                            </div>
                         </div>
                     </div>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
 
-            <motion.div
-                className="flex justify-between mt-2"
-                initial="hidden"
-                animate={controls}
-                variants={fadeFromLeft}
-            >
-                <div className="md:text-xl text-[10px] md:mt-0 mt-[30px]">
-                    <p>Building Micro & Macro Tech Products For the Next Decade</p>
-                    <p>Powered by AI, Community & People</p>
-                </div>
-                <div className="flex items-end md:text-sm text-[7px]">
-                    <p>PRODUCT SPECIFIED LOCATIONS</p>
-                </div>
-            </motion.div>
+            <div className="overflow-hidden">
+                <motion.div
+                    className="flex justify-between mt-2"
+                    initial="hidden"
+                    animate={controls}
+                    variants={fadeFromLeft}
+                >
+                    <div className="md:text-xl text-[10px] md:mt-0 mt-[30px]">
+                        <p>Building Micro & Macro Tech Products For the Next Decade</p>
+                        <p>Powered by AI, Community & People</p>
+                    </div>
+                    <div className="flex items-end md:text-sm text-[7px]">
+                        <p>PRODUCT SPECIFIED LOCATIONS</p>
+                    </div>
+                </motion.div>
+            </div>
 
-            <div className="text-center flex justify-center mt-6 gap-2">
+
+            <div className="text-center flex justify-center md:mt-6 mt-16 gap-2">
                 <AnimatedColoredText text="En" colors={["#e6582a", "#714438", "#fbffe9", "#000"]} />
                 <AnimatedColoredText text="tr" colors={["#714438", "#fbffe9", "#000", "#e6582a"]} />
                 <AnimatedColoredText text="ex" colors={["#fbffe9", "#000", "#e6582a", "#714438"]} />
@@ -78,7 +83,7 @@ function AnimatedColoredText({
 
     const color = useTransform(
         scrollYProgress,
-        colors.map((_, i) => i / (colors.length - 1)), 
+        colors.map((_, i) => i / (colors.length - 1)),
         colors
     );
 
