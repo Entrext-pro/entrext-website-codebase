@@ -15,15 +15,15 @@ export default function SubHero() {
     }, [isInView, controls]);
 
     return (
-        <div className="mt-10" ref={ref}>
+        <div className="md:mt-20 mt-5" ref={ref}>
             <div className="overflow-hidden">
                 <motion.div
-                    className="w-full flex justify-end md:text-3xl text-sm md:text-left text-right"
+                    className="w-full flex justify-end md:text-3xl"
                     initial="hidden"
                     animate={controls}
                     variants={fadeFromRight}
                 >
-                    <div className="w-2xl flex">
+                    <div className="md:w-2xl w-[300px] md:text-left text-right flex">
                         <div className="font-[500] uppercase md:mt-0 mt-[20px]">
                             A product studio ☴ that turns everyday problems into smart,
                             useful apps and tools
@@ -54,49 +54,33 @@ export default function SubHero() {
 
 
             <div className="text-center flex justify-center md:mt-6 mt-16 gap-2">
-                <AnimatedColoredText text="En" colors={["#e6582a", "#714438", "#fbffe9", "#000"]} />
-                <AnimatedColoredText text="tr" colors={["#714438", "#fbffe9", "#000", "#e6582a"]} />
-                <AnimatedColoredText text="ex" colors={["#fbffe9", "#000", "#e6582a", "#714438"]} />
-                <AnimatedColoredText text="t" colors={["#000", "#e6582a", "#714438", "#fbffe9"]} />
+                <AnimatedColoredText text="En" color="#E6582A" />
+                <AnimatedColoredText text="tr" color="#714438" />
+                <AnimatedColoredText text="ex" color="#FBFFE9"/>
+                <AnimatedColoredText text="t" color="#080808" />
             </div>
+
         </div>
     );
 }
 
 function AnimatedColoredText({
     text,
-    colors,
+    color,
 }: {
     text: string;
-    colors: string[];
+    color: string;
 }) {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
-
-    const fontSize = useTransform(scrollYProgress, [0, 1], [
-        "clamp(100px, 20vw, 300px)",
-        "clamp(60px, 8vw, 220px)",
-    ]);
-
-    const color = useTransform(
-        scrollYProgress,
-        colors.map((_, i) => i / (colors.length - 1)),
-        colors
-    );
-
     return (
-        <motion.div
-            ref={ref}
-            style={{ fontSize, color }}
-            className="font-extrabold leading-none"
+        <div
+            style={{ color}}
+            className="font-extrabold leading-none md:text-[400px] text-[95px]"
         >
             {text}
-        </motion.div>
+        </div>
     );
 }
+
 
 
 const fadeFromRight = {
