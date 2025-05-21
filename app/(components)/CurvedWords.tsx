@@ -33,16 +33,17 @@ function CurvedTextLineMobile() {
     return (
         <svg viewBox="0 0 700 100" className="w-full h-[150px]">
             <path
-                id="curvePathMobile"
+                id="curvePathMobileUp"
                 d="M 0 140 Q 200 50, 350 50 T 700 150"
                 fill="transparent"
                 stroke="transparent"
             />
             <text fontSize="30" fill="#000">
-                <textPath href="#curvePathMobile">
+                <textPath href="#curvePathMobileUp">
                     founders fresher org student customer B2B org student founders B2B org student fresher niche
                 </textPath>
             </text>
         </svg>
     );
 }
+

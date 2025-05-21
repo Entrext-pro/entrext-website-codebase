@@ -63,7 +63,7 @@ export default function SubHeroInfo() {
                     <p key={i}>{renderAnimatedText(text)}</p>
                 ))}
             </div>
-            <div className="w-[200px] text-sm font-mono">
+            <div className="w-[200px] text-sm font-mono md:mt-0 mt-3">
                 <h4>Don Valentine</h4>
                 <p>{"[Founder of Sequoia]"}</p>
             </div>
