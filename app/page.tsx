@@ -1,6 +1,7 @@
 import CurvedWords from "./(components)/CurvedWords";
 import Header from "./(components)/Header";
 import Hero from "./(components)/Hero";
+import ScrollWords from "./(components)/ScrollWords";
 import SubHero from "./(components)/SubHero";
 import SubHeroInfo from "./(components)/SubHeroInfo";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <SubHero/>
       
       <SubHeroInfo/>
+      <ScrollWords/>
     </div>
   );
 }

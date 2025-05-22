@@ -45,8 +45,6 @@
 
 body {
   margin:8px;
-  height: 1000vh;
-
 }
 
 @media (min-width: 768px) {
