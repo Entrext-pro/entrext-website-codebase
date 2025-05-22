@@ -75,7 +75,7 @@ export default function ScrollWords() {
                 scaleY: 1.2,
               }}
               className="text-white font-mono font-bold 
-                text-[24px] xs:text-[52px] sm:text-[60px] md:text-[90px] lg:text-[120px] xl:text-[150px]
+                text-[36px] sm:text-[60px] md:text-[90px] lg:text-[120px] xl:text-[150px]
                 uppercase leading-[0.8] sm:leading-none
                 h-[50px] xs:h-[60px] sm:h-[120px] md:h-[200px] lg:h-[300px] xl:h-[400px]
                 flex items-center justify-center text-center
