@@ -7,7 +7,7 @@ export default function Footer() {
       <Image
         src={footer}
         alt="footer"
-        className="w-full h-full object-left md:object-cover transform scale-125 md:scale-100"
+        className="w-full h-full object-left md:object-contain transform scale-125 md:scale-110"
       />
     </div>
   );
