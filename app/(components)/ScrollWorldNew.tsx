@@ -49,7 +49,7 @@ export default function ScrollTextBlur() {
           <p className="text-xl">We can help you</p>
         </div>
 
-        <div className="md:text-xl text-sm w-[700px]">
+        <div className="md:text-xl text-sm md:w-[700px]">
           <div className="flex gap-2">
             <p>{`//`}</p>
             <p>{`Stand out from your competitors`}</p>
@@ -68,7 +68,7 @@ export default function ScrollTextBlur() {
           </div>
         </div>
 
-        <div className="w-[500px] p-2 md:text-xl text-sm flex flex-wrap">
+        <div className="md:w-[500px] md:p-2 md:text-xl text-sm flex flex-wrap">
           <p>{"We welcome all industries, And we’re happy to learn all about you and your business"}</p>
         </div>
       </div>

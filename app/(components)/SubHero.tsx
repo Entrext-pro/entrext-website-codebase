@@ -11,6 +11,12 @@ const merienda = Merienda({
     variable: "--font-bokor"
 })
 
+const handdrawn = Delicious_Handrawn({
+    subsets: ['latin'],
+    weight: "400",
+    variable: "--font-bokor"
+})
+
 
 export default function SubHero() {
     const ref = useRef(null);
@@ -35,9 +41,9 @@ export default function SubHero() {
                     <div className="md:w-2xl w-[300px] md:text-left ">
                         <div className="font-[500] uppercase md:mt-0 md:ml-0 ml-3">
                             A product studio ☴ that turns everyday problems into smart,
-                            useful apps and tools
-                            <div className="inline ml-2">
-
+                            useful
+                            <div className="inline-block mb-4 border-2 border-black -rotate-3 md:w-[10vw] w-[120px] rounded-full px-2">
+                                <span className={`${handdrawn.className} md:text-[1.3vw]`}> apps and tools</span>
                             </div>
                         </div>
                     </div>
@@ -101,7 +107,7 @@ function AnimatedColoredText({ text }: { text: string }) {
                     key={i}
                     animate={{ color: stages[stage][i] ?? base }}
                     transition={{ duration: 0.5 }}
-                    className="font-extrabold leading-none md:text-[20rem] text-[70px]"
+                    className="font-extrabold leading-none md:text-[20vw] text-[70px]"
                 >
                     {char}
                 </motion.span>

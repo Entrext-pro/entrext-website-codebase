@@ -7,9 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image1 from "@/public/1.png"
 import Image2 from "@/public/2.png"
 import Image from "next/image";
+import ApplyModal from "./ApplyModal";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [applyModalOpen, setApplyModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function Header() {
           <Navigate text="Partnerships" />
           <Navigate text="Products" />
           <Navigate text="Culture" />
-          <Navigate text="Apply" />
+          <Navigate text="Apply" onClick={() => setApplyModalOpen(true)} />
         </div>
 
         <div className="md:hidden">
@@ -103,14 +105,15 @@ export default function Header() {
           )}
         </AnimatePresence>
       </div>
+      <ApplyModal open={applyModalOpen} setOpen={setApplyModalOpen} />
     </div>
   );
 }
 
-function Navigate({ text }: { text: string }) {
+function Navigate({ text,onClick }: { text: string, onClick?:()=>void }) {
   return (
     <Link href="">
-      <div className="relative text-[18px] font-[200] hover:text-gray-500 transition-all ease-in-out delay-75 group cursor-pointer">
+      <div onClick={onClick} className="relative font-mono text-[18px] font-[300] hover:text-gray-500 transition-all ease-in-out delay-75 group cursor-pointer">
         {text}
         <span className="absolute left-1/2 bottom-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 ease-in-out transform -translate-x-1/2 origin-center group-hover:w-full group-hover:-translate-x-1/2 group-hover:origin-left"></span>
       </div>

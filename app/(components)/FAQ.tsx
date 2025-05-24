@@ -83,7 +83,7 @@ function FAQSubSection() {
                         <h4 className="font-bold md:text-[28px] text-[12px] md:w-[80%] w-[300px]">{content.title}</h4>
                         <button
                             onClick={() => setFAQSelect(FAQSelect === index ? null : index)}
-                            className="md:py-3 md:px-6 py-1 px-2 border md:text-xl md:w-[8%] text-sm w-[100px] border-black rounded-lg font-[500] cursor-pointer hover:bg-black/80 hover:text-white"
+                            className="md:py-3 md:px-2 py-1 px-2 border md:text-xl md:w-[12%] text-sm w-[100px] border-black rounded-lg font-[500] cursor-pointer hover:bg-black/80 hover:text-white"
                         >
                             {"View more"}
                         </button>
