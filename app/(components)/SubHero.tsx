@@ -6,6 +6,7 @@ import { Merienda, Delicious_Handrawn } from "next/font/google"
 
 
 const merienda = Merienda({
+    subsets: ['latin'],
     weight: "400",
     variable: "--font-bokor"
 })
