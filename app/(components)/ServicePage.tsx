@@ -36,7 +36,7 @@ export function Service() {
           </p>
         </motion.div>
       </div>
-      <div className="px-10 md:px-20 flex flex-col lg:flex-row justify-between gap-12 mt-10">
+      <div className="px-5 md:px-20 flex flex-col lg:flex-row justify-between gap-12 mt-10">
         <div className="w-full md:w-[45%] overflow-hidden flex justify-center items-center">
           <Image
             priority
@@ -87,7 +87,7 @@ function Content({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="md:w-2xl w-[300px] md:pt-0 pt-10 border-t-2 h-[300px] flex items-center border-gray-500"
+      className="md:w-2xl w-full md:pt-0 pt-10 border-t-2 md:h-[300px] flex items-center border-gray-500 "
     >
       <div className="flex md:gap-6 ">
         <div className="md:w-sm text-xl pt-2">{`(0${number})`}</div>
@@ -96,7 +96,7 @@ function Content({
             <h4 className="inline-block">{title}</h4>
           </div>
 
-          <div className="mt-6 md:ml-0 ml-2 md:text-lg leading-relaxed">{content}</div>
+          <div className="mt-6 md:ml-0 md:text-lg leading-relaxed">{content}</div>
         </div>
       </div>
     </motion.div>
