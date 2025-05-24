@@ -1,7 +1,9 @@
 import CurvedWords from "./(components)/CurvedWords";
+import FAQSection from "./(components)/FAQ";
+import Footer from "./(components)/Footer";
 import Header from "./(components)/Header";
 import Hero from "./(components)/Hero";
-import ScrollWords from "./(components)/ScrollWords";
+import ScrollTextBlur from "./(components)/ScrollWorldNew";
 import { Service } from "./(components)/ServicePage";
 import StackingCards from "./(components)/StackingCard";
 import SubHero from "./(components)/SubHero";
@@ -15,9 +17,11 @@ export default function Home() {
       <CurvedWords/>
       <SubHero/>
       <SubHeroInfo/>
-      <ScrollWords/>
+      <ScrollTextBlur/>
       <StackingCards/>
       <Service/>
+      <FAQSection/>
+      <Footer/>
     </div>
   );
 }

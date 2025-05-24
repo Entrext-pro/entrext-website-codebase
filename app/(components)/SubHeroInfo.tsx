@@ -58,15 +58,15 @@ export default function SubHeroInfo() {
     };
 
     return (
-        <div className="mt-15 flex md:flex-row-reverse flex-col md:justify-between" ref={ref}>
-            <div className="md:w-[800px] w-full font-mono md:text-2xl text-lg font-[500] md:space-y-6">
+        <div className="mt-15 flex md:flex-row-reverse flex-col md:justify-between mb-44" ref={ref}>
+            <div className="md:w-[800px] lg:w-[1000px] w-full font-mono md:text-2xl text-lg font-[500] md:space-y-6">
                 <p>{renderAnimatedText(texts[0])}</p>
                 <p>{renderAnimatedText(texts[1])}</p>
                 <div className="hidden md:block">
                     <p>{renderAnimatedText(texts[2])}</p>
                 </div>
             </div>
-            <div className="w-[200px] text-sm font-mono md:mt-0 mt-3">
+            <div className="w-[200px] text-md lg:text-lg lg:w-[250px] font-mono md:mt-0 mt-3">
                 <h4>Why Entrext should matter to you ?</h4>
                 <p>{"[Fundamental roots]"}</p>
             </div>

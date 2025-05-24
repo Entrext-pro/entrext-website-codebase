@@ -1,7 +1,15 @@
 "use client";
 
-import { delay, motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { Merienda, Delicious_Handrawn } from "next/font/google"
+
+
+const merienda = Merienda({
+    weight: "400",
+    variable: "--font-bokor"
+})
+
 
 export default function SubHero() {
     const ref = useRef(null);
@@ -15,7 +23,7 @@ export default function SubHero() {
     }, [isInView, controls]);
 
     return (
-        <div className="md:mt-20" ref={ref}>
+        <div className="md:mt-20 font-mono overflow-hidden md:mb-40 mb-32 " ref={ref}>
             <div className="overflow-hidden">
                 <motion.div
                     className="w-full flex md:justify-end justify-center md:text-3xl"
@@ -28,14 +36,14 @@ export default function SubHero() {
                             A product studio ☴ that turns everyday problems into smart,
                             useful apps and tools
                             <div className="inline ml-2">
-                                [Logo]
+
                             </div>
                         </div>
                     </div>
                 </motion.div>
             </div>
 
-            <div className="overflow-hidden">
+            <div className="overflow-hidden md:mb-52 mb-3">
                 <motion.div
                     className="flex justify-between mt-2"
                     initial="hidden"
@@ -56,70 +64,43 @@ export default function SubHero() {
                 <CurvedTextReverseLineMobile />
             </div>
 
-            <div className="text-center flex justify-center md:mt-6 mt-8 gap-2">
-                <AnimatedColoredText text="En" color="#E6582A" />
-                <AnimatedColoredText text="tr" color="#714438" />
-                <AnimatedColoredText text="ex" color="#FBFFE9" />
-                <AnimatedColoredText text="t" color="#080808" />
+            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 mt-10  gap-2  ${merienda.className}`}>
+                <AnimatedColoredText text="Entrext" />
             </div>
-
         </div>
     );
 }
 
-function AnimatedColoredText({
-    text,
-    color,
-}: {
-    text: string;
-    color: string;
-}) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.5 });
-    const controls = useAnimation();
+function AnimatedColoredText({ text }: { text: string }) {
+    const base = "#000000";
+    const col = ["#E6582A", "#F9C74F", "#90BE6D"];
+
+    const stages: Array<Record<number, string>> = [
+        {},
+        { 5: col[0], 3: col[1], 4: col[2] },
+        { 0: col[0], 2: col[1], 5: col[2] },
+    ];
+
+    const [stage, setStage] = useState(0);
+
+    const stageCount = stages.length;
 
     useEffect(() => {
-        if (isInView) {
-            controls.start((i) => "visible");
-        }
-    }, [isInView, controls]);
+        const id = setInterval(() => {
+            setStage((s) => (s + 1) % stageCount);
+        }, 2000);
+        return () => clearInterval(id);
+    }, [stageCount]);
 
-    const letterVariants = {
-        hidden: (i: number) => ({
-            opacity: 0,
-            y: 100,
-            scale: 0.8,
-            transition: {
-                delay: i * 0.08,
-                duration: 0.4,
-                ease: "easeOut",
-            },
-        }),
-        visible: (i: number) => ({
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                delay: i * 0.08,
-                duration: 0.6,
-                ease: "easeOut",
-            },
-        }),
-    };
-
-    const letters = text.split("");
 
     return (
-        <div ref={ref} className="flex">
-            {letters.map((char, i) => (
+        <div className="flex">
+            {text.split("").map((char, i) => (
                 <motion.span
                     key={i}
-                    custom={i}
-                    initial="hidden"
-                    animate={controls}
-                    variants={letterVariants}
-                    style={{ color }}
-                    className="font-extrabold leading-none md:text-[410px] text-[97px]"
+                    animate={{ color: stages[stage][i] ?? base }}
+                    transition={{ duration: 0.5 }}
+                    className="font-extrabold leading-none md:text-[20rem] text-[70px]"
                 >
                     {char}
                 </motion.span>

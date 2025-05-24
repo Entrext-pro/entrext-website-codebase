@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Notebook from "@/public/notebook.jpg";
+import Extrext from "@/public/extrextBg.jpg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -14,7 +14,7 @@ export default function Hero() {
     return (
         <div>
             <div className="md:mt-[90px] mt-[70px] md:h-[500px] h-[120px] overflow-hidden">
-                <div className="text-[50px] sm:text-[120px] md:text-[160px] lg:text-[200px] xl:text-[210px] font-[1000] leading-[1] tracking-tight">
+                <div className="text-[50px] sm:text-[180px] md:text-[160px] lg:text-[200px] xl:text-[240px] font-[1000] leading-[1] tracking-tight">
                     <div className="flex flex-wrap">
                         {line1.split("").map((char, index) => (
                             <motion.span
@@ -71,12 +71,13 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="relative overflow-hidden w-full h-[200px] md:h-[400px] lg:h-[600px]">
+            <div className="relative overflow-hidden w-full h-[200px] md:h-[400px] lg:h-[900px] md:mt-28 mt-10">
                 <Image
                     priority
                     className="w-full h-full object-cover"
                     alt="Notebook"
-                    src={Notebook}
+                    src={Extrext}
+                    quality={100}
                 />
             </div>
         </div>

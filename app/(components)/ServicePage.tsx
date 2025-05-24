@@ -1,5 +1,5 @@
 'use client';
-import Flow from "@/public/img_figure01.webp";
+import Flow from "@/public/extrextFLow.png";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -12,17 +12,16 @@ export function Service() {
   const isDescInView = useInView(descRef, { once: true });
 
   return (
-    <div className="">
-      <div className="flex px-10 md:px-20 justify-between flex-col md:flex-row gap-12 ">
+    <div className="font-mono">
+      <div className="flex px-4 md:px-20 justify-between flex-col md:flex-row gap-10">
         <motion.div
           ref={titleRef}
           initial={{ opacity: 0, y: 50 }}
           animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-7xl md:text-9xl font-medium leading-none "
+          className="text-5xl md:text-8xl font-medium leading-none "
         >
-          Our<br />
-          <span className="pl-4 md:pl-10">Service</span>
+          <span className="md:pl-10">Partnership</span>
         </motion.div>
 
         <motion.div
@@ -30,7 +29,7 @@ export function Service() {
           initial={{ opacity: 0, y: 50 }}
           animate={isDescInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-2xl w-full md:w-[700px]"
+          className="text-lg md:text-2xl md:pl-10 w-full md:w-[700px]"
         >
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nulla ab natus animi itaque nisi minus quisquam excepturi saepe nobis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis officiis cupiditate ab distinctio quae sed eum, dicta doloribus quia quidem!
@@ -38,14 +37,15 @@ export function Service() {
         </motion.div>
       </div>
       <div className="px-10 md:px-20 flex flex-col lg:flex-row justify-between gap-12 mt-10">
-        <div>
+        <div className="w-full md:w-[45%] overflow-hidden flex justify-center items-center">
           <Image
             priority
-            className="md:w-[550px] w-[400px] md:h-[600px] h-[300px] object-contain "
-            alt="Notebook"
+            className="w-full md:h-auto max-w-[1000px] object-contain"
+            alt="Flow"
             src={Flow}
           />
         </div>
+
 
         <div className="flex flex-col gap-10">
           <Content
@@ -87,7 +87,7 @@ function Content({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="md:w-2xl w-[300px] border-t-2 h-[300px] flex items-center border-gray-500"
+      className="md:w-2xl w-[300px] md:pt-0 pt-10 border-t-2 h-[300px] flex items-center border-gray-500"
     >
       <div className="flex md:gap-6 ">
         <div className="md:w-sm text-xl pt-2">{`(0${number})`}</div>
@@ -96,7 +96,7 @@ function Content({
             <h4 className="inline-block">{title}</h4>
           </div>
 
-          <div className="mt-6 md:ml-0 ml-2 text-lg leading-relaxed">{content}</div>
+          <div className="mt-6 md:ml-0 ml-2 md:text-lg leading-relaxed">{content}</div>
         </div>
       </div>
     </motion.div>

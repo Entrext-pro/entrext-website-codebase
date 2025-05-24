@@ -1,82 +1,108 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image1 from "@/public/1.png"
+import Image2 from "@/public/2.png"
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
-    <div className="flex justify-between items-center ">
-      <h4 className="md:w-16 w-4 font-[1000] md:text-3xl text-xl leading-[1]">
-        Entrext Logo
-      </h4>
+    <div className="sticky top-0 z-50 py-5 bg-white">
+      <div className="flex justify-between items-center ">
+        <motion.div
+          initial={false}
+          animate={{ rotate: scrolled ? 360 : 0 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="size-16 relative"
+        >
+          <Image
+            src={scrolled ? Image2 : Image1}
+            alt="Entrext Logo"
+            fill
+            className="object-contain transition-opacity duration-300"
+          />
+        </motion.div>
 
-      <div className="md:flex gap-20 mr-4 hidden">
-        <Navigate text="Partnerships" />
-        <Navigate text="Products" />
-        <Navigate text="Culture" />
-        <Navigate text="Apply" />
-      </div>
 
-      <div className="md:hidden">
-        <button onClick={() => setMenuOpen(true)}>
-          <Menu className="w-6 h-6" />
-        </button>
-      </div>
+        <div className="md:flex gap-20 mr-4 hidden">
+          <Navigate text="Partnerships" />
+          <Navigate text="Products" />
+          <Navigate text="Culture" />
+          <Navigate text="Apply" />
+        </div>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ y: "-100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "100%" }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex flex-col items-end justify-start pt-50"
-          >
-            <div className="flex justify-between items-center w-full">
-              <h4 className="md:w-16 w-4 font-[700] text-white md:text-3xl text-xl leading-[1] absolute top-5 left-5">
-                Entrext Logo
-              </h4>
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="absolute top-5 right-5"
-              >
-                <X className="w-8 h-8 text-white" />
-              </button>
-            </div>
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(true)}>
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
 
-            {[{
-                title:"Partnerships",
-                href:""
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ y: "-100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex flex-col items-end justify-start pt-50"
+            >
+              <div className="flex justify-between items-center w-full">
+                <h4 className="md:w-16 w-4 font-[700] text-white md:text-3xl text-xl leading-[1] absolute top-5 left-5">
+                  Entrext Logo
+                </h4>
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="absolute top-5 right-5"
+                >
+                  <X className="w-8 h-8 text-white" />
+                </button>
+              </div>
+
+              {[{
+                title: "Partnerships",
+                href: ""
               },
               {
-                title:"Products",
-                href:""
+                title: "Products",
+                href: ""
               },
               {
-                title:"Culture",
-                href:""
+                title: "Culture",
+                href: ""
               },
               {
-                title:"Apply",
-                href:""
+                title: "Apply",
+                href: ""
               }
               ].map((item, i) => (
-              <Link
-                key={i}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-4xl font-[1000] mr-7 hover:text-gray-400 transition active:text-gray-500"
-              >
-                {item.title}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <Link
+                  key={i}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-4xl font-[1000] mr-7 hover:text-gray-400 transition active:text-gray-500"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
@@ -84,7 +110,7 @@ export default function Header() {
 function Navigate({ text }: { text: string }) {
   return (
     <Link href="">
-      <div className="relative text-[14px] font-[200] hover:text-gray-500 transition-all ease-in-out delay-75 group cursor-pointer">
+      <div className="relative text-[18px] font-[200] hover:text-gray-500 transition-all ease-in-out delay-75 group cursor-pointer">
         {text}
         <span className="absolute left-1/2 bottom-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 ease-in-out transform -translate-x-1/2 origin-center group-hover:w-full group-hover:-translate-x-1/2 group-hover:origin-left"></span>
       </div>
