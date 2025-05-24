@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import CurvedWords from "./(components)/CurvedWords";
 import FAQSection from "./(components)/FAQ";
 import Footer from "./(components)/Footer";
@@ -8,20 +11,28 @@ import { Service } from "./(components)/ServicePage";
 import StackingCards from "./(components)/StackingCard";
 import SubHero from "./(components)/SubHero";
 import SubHeroInfo from "./(components)/SubHeroInfo";
+import LoaderLogic from "./(components)/Loader";
 
 export default function Home() {
+  const [showSite, setShowSite] = useState(false);
+
   return (
-    <div>
-      <Header/>
-      <Hero/>
-      <CurvedWords/>
-      <SubHero/>
-      <SubHeroInfo/>
-      <ScrollTextBlur/>
-      <StackingCards/>
-      <Service/>
-      <FAQSection/>
-      <Footer/>
-    </div>
+    <>
+      {!showSite && <LoaderLogic onComplete={()=>setShowSite(true)} />}
+      {showSite && (
+        <div>
+          <Header />
+          <Hero />
+          <CurvedWords />
+          <SubHero />
+          <SubHeroInfo />
+          <ScrollTextBlur />
+          <StackingCards />
+          <Service />
+          <FAQSection />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
