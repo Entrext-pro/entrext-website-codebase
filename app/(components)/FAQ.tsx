@@ -78,7 +78,7 @@ function FAQSubSection() {
     return (
         <div >
             {FAQContent.map((content, index) => (
-                <div key={index} className="w-full border-t-4 border-gray-500 border-dotted md:px-10 md:py-7 py-3 font-sans">
+                <div key={index} className="w-full md:border-t-4 border-t-2 border-gray-500 border-dotted md:px-10 md:py-7 py-3 font-sans">
                     <div className="w-full flex justify-between items-start mb-2">
                         <h4 className="font-bold md:text-[28px] text-[12px] md:w-[80%] w-[300px]">{content.title}</h4>
                         <button

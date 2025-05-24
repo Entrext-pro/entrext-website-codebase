@@ -28,13 +28,13 @@ export default function Header() {
           initial={false}
           animate={{ rotate: scrolled ? 360 : 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="size-16 relative"
+          className="md:size-16 size-10 relative"
         >
           <Image
             src={scrolled ? Image2 : Image1}
             alt="Entrext Logo"
             fill
-            className="object-contain transition-opacity duration-300"
+            className="object-contain transition-opacity duration-300 rounded-md"
           />
         </motion.div>
 
