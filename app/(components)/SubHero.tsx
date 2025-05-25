@@ -170,7 +170,7 @@ function CurvedTextReverseLineMobile() {
         <svg viewBox="0 0 700 150" className="w-full h-[150px]" preserveAspectRatio="none">
             <path
                 id="curvePathMobile"
-                d="M 0 50 Q 200 140, 350 140 T 700 50"
+                d="M 0 70 Q 200 140, 350 140 T 700 60"
                 fill="transparent"
                 stroke="transparent"
             />

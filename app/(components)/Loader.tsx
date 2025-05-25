@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Home from "./(animations)/Bolb";
 
 export default function LoaderLogic({ onComplete }: { onComplete: () => void }) {
   const [done, setDone] = useState(false);
@@ -10,7 +11,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
     const timeout = setTimeout(() => {
       setDone(true);
       onComplete();
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(timeout);
   }, [onComplete]);
 
@@ -81,7 +82,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
                 className="h-full bg-black"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 2, delay: 1, ease: "easeInOut" }}
+                transition={{ duration: 4, delay: 1, ease: "easeInOut" }}
               />
             </motion.div>
 
@@ -96,10 +97,9 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
             </motion.p>
           </div>
 
-          {/* 🧠 Preload Blob Animation Invisibly */}
-          {/* <div className="absolute opacity-0 pointer-events-none inset-0">
+          <div className="absolute opacity-0 pointer-events-none inset-0">
             <Home />
-          </div> */}
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

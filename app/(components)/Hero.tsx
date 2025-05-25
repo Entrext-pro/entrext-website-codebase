@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Extrext from "@/public/extrextBg.jpg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Home from "./(animations)/Bolb";
 
 const line1 = "ENTERING";
 const line2 = "THE NEXT ERA";
@@ -71,14 +72,15 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="relative overflow-hidden w-full h-[200px] md:h-[400px] lg:h-[900px] md:mt-28 mt-10">
-                <Image
+            <div className={`relative overflow-hidden w-full h-[550px] md:h-[400px] lg:h-[900px] md:mt-28 mt-10 ${isMobile ? 'pointer-events-none':""}`}>
+                {/* <Image
                     priority
                     className="w-full h-full object-cover"
                     alt="Notebook"
                     src={Extrext}
                     quality={100}
-                />
+                /> */}
+                <Home/>
             </div>
         </div>
     );

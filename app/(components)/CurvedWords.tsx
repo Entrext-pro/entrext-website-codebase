@@ -1,6 +1,6 @@
 export default function CurvedTextLine() {
     return (
-        <div className="w-full flex justify-center md:my-52 mt-20">
+        <div className="w-full flex justify-center md:my-52 mt-52 ">
             <div className="block sm:hidden">
                 <CurvedTextLineMobile />
             </div>
@@ -35,7 +35,7 @@ function CurvedTextLineMobile() {
         <svg viewBox="0 0 700 150" className="w-full h-[150px] font-mono" preserveAspectRatio="none">
             <path
                 id="curvePathMobileUp"
-                d="M 0 140 Q 200 50, 350 50 T 700 150"
+                d="M 0 120 Q 200 50, 350 50 T 700 120"
                 fill="transparent"
                 stroke="transparent"
             />
