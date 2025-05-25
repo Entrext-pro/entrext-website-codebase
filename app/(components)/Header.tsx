@@ -75,32 +75,13 @@ export default function Header() {
                 </button>
               </div>
 
-              {[{
-                title: "Partnerships",
-                href: ""
-              },
-              {
-                title: "Products",
-                href: ""
-              },
-              {
-                title: "Culture",
-                href: ""
-              },
-              {
-                title: "Apply",
-                href: ""
-              }
-              ].map((item, i) => (
-                <Link
-                  key={i}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-4xl font-[1000] mr-7 hover:text-gray-400 transition active:text-gray-500"
-                >
-                  {item.title}
-                </Link>
-              ))}
+              <NavigateMobile title="Partnerships" />
+              <NavigateMobile title="Products" />
+              <NavigateMobile title="Culture" />
+              <NavigateMobile title="Apply" onClick={() => {
+                  setMenuOpen(false)
+                  setApplyModalOpen(true)
+                }} />
             </motion.div>
           )}
         </AnimatePresence>
@@ -110,7 +91,7 @@ export default function Header() {
   );
 }
 
-function Navigate({ text,onClick }: { text: string, onClick?:()=>void }) {
+function Navigate({ text, onClick }: { text: string, onClick?: () => void }) {
   return (
     <div>
       <div onClick={onClick} className="relative font-mono text-[18px] font-[300] hover:text-gray-500 transition-all ease-in-out delay-75 group cursor-pointer">
@@ -119,4 +100,15 @@ function Navigate({ text,onClick }: { text: string, onClick?:()=>void }) {
       </div>
     </div>
   );
+}
+
+function NavigateMobile({ title, onClick }: { title: string, onClick?: () => void }) {
+  return (
+    <div
+      onClick={onClick}
+      className="text-4xl font-[1000] mr-7 hover:text-gray-400 transition active:text-gray-500 cursor-pointer"
+    >
+      {title}
+    </div>
+  )
 }

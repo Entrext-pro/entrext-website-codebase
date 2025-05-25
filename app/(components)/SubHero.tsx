@@ -71,7 +71,7 @@ export default function SubHero() {
                 <CurvedTextReverseLineMobile />
             </div>
 
-            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 my-20 gap-2  ${merienda.className}`}>
+            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 my-20   ${merienda.className}`}>
                 <AnimatedColoredText text="Entrext" />
             </div>
         </div>
@@ -144,7 +144,7 @@ function AnimatedColoredText({ text }: { text: string }) {
                     key={i}
                     animate={{ color: stages[stage][i] ?? base }}
                     transition={{ duration: 1 }}
-                    className="font-extrabold leading-none md:text-[20vw] text-[20vw]"
+                    className="font-extrabold leading-none md:text-[20vw] text-[19vw]"
                     
                 >
                     {char}

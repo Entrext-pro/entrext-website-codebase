@@ -72,7 +72,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className={`relative overflow-hidden w-full h-[550px] lg:h-[800px] md:my-24 mt-10 ${isMobile ? 'pointer-events-none':""}`}>
+            <div className={`relative overflow-hidden w-full h-[500px] lg:h-[800px] md:my-24 mt-10 ${isMobile ? 'pointer-events-none':""}`}>
                 {/* <Image
                     priority
                     className="w-full h-full object-cover"

@@ -127,14 +127,12 @@ export const Card: React.FC<CardProps> = ({
             >
                 <h2 className='md:text-6xl text-2xl text-center font-semibold'>{title}</h2>
                 <div className={`flex flex-col sm:flex-row h-full mt-5 gap-6 sm:gap-10`}>
-                    {/* Image on top for mobile */}
-                    <div className={`relative w-full sm:w-[40%] h-[200px] sm:h-full rounded-lg overflow-hidden`}>
+                    <div className={`relative w-full sm:w-[40%] h-[150px] sm:h-full rounded-lg overflow-hidden`}>
                         <motion.div className='w-full h-full' style={{ scale: imageScale }}>
                             <Image fill src={url} alt='image' className='object-cover' />
                         </motion.div>
                     </div>
 
-                    {/* Text below for mobile */}
                     <div className='w-full sm:w-[40%] relative sm:top-[10%]'>
                         <p className='md:text-3xl text-sm capitalize'>{description}</p>
                         <span className='hidden sm:flex items-center gap-2 pt-2'>

@@ -58,7 +58,7 @@ export default function SubHeroInfo() {
     };
 
     return (
-        <div className="mt-15 flex md:flex-row-reverse flex-col md:justify-between mb-44" ref={ref}>
+        <div className="mt-15 flex md:flex-row-reverse flex-col md:justify-between md:mb-44 mb-20" ref={ref}>
             <div className="md:w-[800px] lg:w-[1000px] w-full font-mono md:text-2xl text-lg font-[500] md:space-y-6">
                 <p>{renderAnimatedText(texts[0])}</p>
                 <p>{renderAnimatedText(texts[1])}</p>

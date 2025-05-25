@@ -23,7 +23,7 @@ export default function Home() {
       {!showSite && <LoaderLogic onComplete={() => setShowSite(true)} />}
       {showSite && (
         <div>
-          <div className="m-8">
+          <div className="m-2">
             <Header />
             <Hero />
             <CurvedWords />

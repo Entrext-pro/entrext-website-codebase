@@ -43,7 +43,7 @@ export default function ScrollTextBlur() {
   }, [])
 
   return (
-    <div className="bg-black min-h-screen md:h-[2500px] flex flex-col items-center md:justify-center md:py-10 p-4  overflow-hidden">
+    <div className=" bg-black min-h-screen md:h-[2500px] flex flex-col items-center md:justify-center md:py-10 p-4  overflow-hidden">
 
       <div className="text-white w-full flex md:flex-row flex-col md:gap-0 gap-5 justify-around items-start font-mono md:mb-56 mb-20">
 
@@ -81,7 +81,7 @@ export default function ScrollTextBlur() {
           <div
             key={index}
             ref={(el) => { sectionRefs.current[index] = el }}
-            className="flex items-center justify-center w-full md:pb-44 pb-10"
+            className="flex items-center justify-center w-full md:pb-44 pb-12"
             style={{
               filter: activeIndex === index ? "blur(0px)" : "blur(8px)",
               opacity: activeIndex === index ? 1 : 0.3,
@@ -90,7 +90,7 @@ export default function ScrollTextBlur() {
           >
             <h1 className="tracking-tighter [transform:scale(1,2)] font-bold text-center text-white bg-clip-text blur-[0.5px]">
               <div className="flex items-start">
-                <div className="text-4xl md:text-[13rem]">
+                <div className="text-5xl md:text-[13rem]">
                   {text}
                 </div>
                 <div className="md:block hidden text-5 pt-10 text-yellow-300 pl-2">

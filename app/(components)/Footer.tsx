@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <div className="md:-mx-5 overflow-x-hidden">
-      <div className="w-full md:mt-40 mt-20 md:h-[500px] h-[200px]">
+      <div className="w-full md:mt-40 mt-20 md:h-[500px] h-[100px]">
         <Image
           src={footer}
           alt="footer"

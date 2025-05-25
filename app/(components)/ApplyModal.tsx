@@ -9,14 +9,14 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
     return (
         <FramerModal open={open} setOpen={setOpen}>
             <ModalContent>
-                <div className='font-mono flex flex-col space-y-1.5 text-center sm:text-left'>
+                <div className='font-mono flex flex-col space-y-1.5 text-center sm:text-left '>
                     <h2 className='text-2xl font-semibold leading-none text-center tracking-tight'>
                         Apply for?
                     </h2>
                     <div className='grid gap-4 py-4'>
                         <button
                             onClick={() => alert("Partnership")}
-                            className="relative w-full p-3 border-2 text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
+                            className="relative w-full p-3 border-2 border-black text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
                         >
                             <span className="relative z-20 transition-colors duration-500 group-hover:text-white">
                                 Partnership
@@ -29,7 +29,7 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
 
                         <button
                             onClick={() => alert("Content Creator")}
-                            className="relative w-full p-3 border-2 text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
+                            className="relative w-full p-3 border-2 border-black text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
                         >
                             <span className="relative z-20 transition-colors duration-500 group-hover:text-white">
                                 Content Creator
