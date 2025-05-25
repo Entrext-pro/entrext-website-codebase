@@ -18,7 +18,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="md:-mx-5 -mx-5 overflow-x-hidden">
+    <div className="md:-mx-5 overflow-x-hidden">
       <div className="w-full md:mt-40 mt-20 md:h-[500px] h-[200px]">
         <Image
           src={footer}
@@ -27,7 +27,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="">
+      <div className="overflow-hidden">
         {isMobile ? <MobileFooter /> : <DesktopFooter />}
       </div>
     </div>

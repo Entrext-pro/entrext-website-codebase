@@ -2,47 +2,48 @@
 import { ReactLenis } from 'lenis/react';
 import { useTransform, motion, useScroll, MotionValue } from 'motion/react';
 import { useRef, JSX } from 'react';
-import Image from 'next/image';
+import picture1 from "@/public/picture1.jpg"
+import picture2 from "@/public/picture2.jpg"
+import picture3 from "@/public/picture3.jpg"
+import picture4 from "@/public/picture4.jpg"
+import picture5 from "@/public/picture5.png"
+
+import Image, { StaticImageData } from 'next/image';
 const projects = [
     {
         title: 'Knowx',
-        description:
-            `Matches you with students who can help you study the subjects you're stuck on.`,
+        description:`Matches you with students who can help you study the subjects you're stuck on.`,
         src: 'rock.jpg',
-        link: 'https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop',
+        link: picture1,
         color: '#222222',
     },
     {
         title: 'Leaderbase',
-        description:
-            `startups hire experienced tech executives by the hour for guidance.`,
+        description:`startups hire experienced tech executives by the hour for guidance.`,
         src: 'tree.jpg',
-        link: 'https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60',
+        link: picture2,
         color: '#222222',
     },
     {
         title: 'SecretSanta',
-        description:
-            `Friends anonymously suggest and vote on the perfect present while pooling money.`,
+        description:`Friends anonymously suggest and vote on the perfect present while pooling money.`,
         src: 'water.jpg',
-        link: 'https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop',
+        link: picture3,
         color: '#222222',
         
     },
     {
         title: 'Herth',
-        description:
-            'Women sell their handmade goods and support each other globally.',
+        description:'Women sell their handmade goods and support each other globally.',
         src: 'house.jpg',
-        link: 'https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60',
+        link: picture4,
         color: '#222222',
     },
     {
         title: 'Borrowd',
-        description:
-            `platform to rent out your unused stuff or borrow what you need in UAE`,
+        description:`platform to rent out your unused stuff or borrow what you need in UAE`,
         src: 'cactus.jpg',
-        link: 'https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop',
+        link: picture5,
         color: '#222222',
     },
 ];
@@ -85,7 +86,7 @@ interface CardProps {
     title: string;
     description: string;
     src: string;
-    url: string;
+    url: StaticImageData;
     color: string;
     progress: MotionValue<number>;
     range: [number, number];

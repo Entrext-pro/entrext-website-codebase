@@ -43,10 +43,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-body {
-  margin:8px;
-}
-
 @media (min-width: 768px) {
   body {
     margin: 24px;

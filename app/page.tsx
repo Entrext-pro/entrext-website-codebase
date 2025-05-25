@@ -20,18 +20,20 @@ export default function Home() {
 
   return (
     <>
-      {!showSite && <LoaderLogic onComplete={()=>setShowSite(true)} />}
+      {!showSite && <LoaderLogic onComplete={() => setShowSite(true)} />}
       {showSite && (
         <div>
-          <Header />
-          <Hero />
-          <CurvedWords />
-          <SubHero />
-          <SubHeroInfo />
-          <ScrollTextBlur />
-          <StackingCards />
-          <Service />
-          <FAQSection />
+          <div className="m-8">
+            <Header />
+            <Hero />
+            <CurvedWords />
+            <SubHero />
+            <SubHeroInfo />
+            <ScrollTextBlur />
+            <StackingCards />
+            <Service />
+            <FAQSection />
+          </div>
           <Footer />
         </div>
       )}
