@@ -41,7 +41,7 @@ const FAQContent = [
     {
         id: 8,
         title: "Can i bring my own team?",
-        Description: ""
+        Description: "Yes! If you have developers, designers, or marketers, we can collaborate while still leading AI development."
     },
     {
         id: 9,
