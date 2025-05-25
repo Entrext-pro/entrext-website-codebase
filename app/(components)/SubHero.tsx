@@ -30,7 +30,7 @@ export default function SubHero() {
     }, [isInView, controls]);
 
     return (
-        <div className="md:mt-20 font-mono overflow-hidden md:mb-40 mb-32 " ref={ref}>
+        <div className="md:mt-20 font-mono overflow-hidden md:mb-40 mb-20" ref={ref}>
             <div className="overflow-hidden">
                 <motion.div
                     className="w-full flex md:justify-end justify-center md:text-3xl"
@@ -71,7 +71,7 @@ export default function SubHero() {
                 <CurvedTextReverseLineMobile />
             </div>
 
-            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 mt-10  gap-2  ${merienda.className}`}>
+            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 my-20 gap-2  ${merienda.className}`}>
                 <AnimatedColoredText text="Entrext" />
             </div>
         </div>
@@ -79,17 +79,55 @@ export default function SubHero() {
 }
 
 function AnimatedColoredText({ text }: { text: string }) {
-    const base = "#000000";
-    const col = ["#E6582A", "#F9C74F", "#90BE6D"];
+    const base = "#000000"; 
+    const enColor = "#E6582A";      
+    const trColor = "#714438";      
+    const exColor = "#D6DCC5";  
+    const grColor = '#A0C878';    
 
     const stages: Array<Record<number, string>> = [
-        {},
-        { 5: col[0], 3: col[1], 4: col[2] },
-        { 0: col[0], 2: col[1], 5: col[2] },
+       
+        {
+            0: enColor,
+            1: enColor,
+            2: trColor, 
+            3: trColor, 
+            4: exColor, 
+            5: exColor, 
+            6: grColor,  
+        },
+
+        {
+            0: base,
+            1: base,
+            2: trColor,
+            3: trColor,
+            4: exColor,
+            5: exColor,
+            6: grColor,
+        },
+        {
+            0: enColor,
+            1: enColor,
+            2: base,
+            3: base,
+            4: exColor,
+            5: exColor,
+            6: grColor,
+        },
+
+        {
+            0: enColor,
+            1: enColor,
+            2: trColor,
+            3: trColor,
+            4: base,
+            5: base,
+            6: base,
+        },
     ];
 
     const [stage, setStage] = useState(0);
-
     const stageCount = stages.length;
 
     useEffect(() => {
@@ -99,15 +137,15 @@ function AnimatedColoredText({ text }: { text: string }) {
         return () => clearInterval(id);
     }, [stageCount]);
 
-
     return (
         <div className="flex">
             {text.split("").map((char, i) => (
                 <motion.span
                     key={i}
                     animate={{ color: stages[stage][i] ?? base }}
-                    transition={{ duration: 0.5 }}
-                    className="font-extrabold leading-none md:text-[20vw] text-[70px]"
+                    transition={{ duration: 1 }}
+                    className="font-extrabold leading-none md:text-[20vw] text-[20vw]"
+                    
                 >
                     {char}
                 </motion.span>
@@ -129,14 +167,14 @@ const fadeFromLeft = {
 
 function CurvedTextReverseLineMobile() {
     return (
-        <svg viewBox="0 0 700 200" className="w-full h-[150px]">
+        <svg viewBox="0 0 700 150" className="w-full h-[150px]" preserveAspectRatio="none">
             <path
                 id="curvePathMobile"
                 d="M 0 50 Q 200 140, 350 140 T 700 50"
                 fill="transparent"
                 stroke="transparent"
             />
-            <text fontSize="30" fill="#000">
+            <text fontSize="28" fill="#000">
                 <textPath href="#curvePathMobile">
                     founders fresher org student customer B2B org student founders B2B org student fresher niche
                 </textPath>

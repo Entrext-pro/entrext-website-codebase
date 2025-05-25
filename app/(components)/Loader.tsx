@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function LoaderLogic({ onComplete }: { onComplete: () => void }) {
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setDone(true)
-      onComplete()
-    }, 3000)
-    return () => clearTimeout(timeout)
-  }, [onComplete])
+      setDone(true);
+      onComplete();
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, [onComplete]);
 
-  const letters = "ENTREXT".split("")
+  const letters = "ENTREXT".split("");
 
   return (
     <AnimatePresence>
@@ -26,6 +26,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
           className="fixed inset-0 z-50 bg-white flex items-center justify-center"
         >
           <div className="text-center">
+            {/* Animated Letters */}
             <div className="relative">
               {letters.map((letter, index) => (
                 <motion.span
@@ -44,6 +45,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
               ))}
             </div>
 
+            {/* Loading Dots */}
             <motion.div
               className="flex justify-center space-x-1 mt-8"
               initial={{ opacity: 0 }}
@@ -61,13 +63,14 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
                   transition={{
                     duration: 1,
                     delay: i * 0.2,
-                    repeat: Number.POSITIVE_INFINITY,
+                    repeat: Infinity,
                     ease: "easeInOut",
                   }}
                 />
               ))}
             </motion.div>
 
+            {/* Loading Bar */}
             <motion.div
               className="w-48 h-0.5 bg-gray-200 mx-auto mt-6 overflow-hidden"
               initial={{ opacity: 0 }}
@@ -82,7 +85,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
               />
             </motion.div>
 
-
+            {/* Loading Text */}
             <motion.p
               className="font-mono text-sm text-gray-600 mt-4 tracking-widest"
               initial={{ opacity: 0 }}
@@ -92,8 +95,13 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
               LOADING...
             </motion.p>
           </div>
+
+          {/* 🧠 Preload Blob Animation Invisibly */}
+          {/* <div className="absolute opacity-0 pointer-events-none inset-0">
+            <Home />
+          </div> */}
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }

@@ -12,8 +12,10 @@ import StackingCards from "./(components)/StackingCard";
 import SubHero from "./(components)/SubHero";
 import SubHeroInfo from "./(components)/SubHeroInfo";
 import LoaderLogic from "./(components)/Loader";
+import useLenis from "@/hook/useLenis";
 
 export default function Home() {
+  useLenis();
   const [showSite, setShowSite] = useState(false);
 
   return (

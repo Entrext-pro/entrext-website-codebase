@@ -1,6 +1,9 @@
 "use client"
-
 import { useEffect, useState, useRef } from "react"
+import type { JSX } from "react/jsx-runtime"
+import { animate, scroll, spring } from 'motion';
+import { ReactLenis } from 'lenis/react';
+import Image from "next/image";
 
 const textItems = ["MICROSAAS", "AI TOOLS", "VOICE-ASSIST", "MARKETPLACES", "GAMES"]
 
@@ -73,30 +76,35 @@ export default function ScrollTextBlur() {
         </div>
       </div>
 
-      {textItems.map((text, index) => (
-        <div
-          key={index}
-          ref={(el) => { sectionRefs.current[index] = el }}
-          className="flex items-center justify-center w-full md:pb-44 pb-10"
-          style={{
-            filter: activeIndex === index ? "blur(0px)" : "blur(8px)",
-            opacity: activeIndex === index ? 1 : 0.3,
-            transition: "all 0.5s ease",
-          }}
-        >
-          <h1 className="tracking-tighter [transform:scale(1,2)] font-bold text-center text-white bg-clip-text blur-[0.5px]">
-            <div className="flex items-start">
-              <div className="text-4xl md:text-[13rem]">
-                {text}
+      <div className="">
+        {textItems.map((text, index) => (
+          <div
+            key={index}
+            ref={(el) => { sectionRefs.current[index] = el }}
+            className="flex items-center justify-center w-full md:pb-44 pb-10"
+            style={{
+              filter: activeIndex === index ? "blur(0px)" : "blur(8px)",
+              opacity: activeIndex === index ? 1 : 0.3,
+              transition: "all 0.5s ease",
+            }}
+          >
+            <h1 className="tracking-tighter [transform:scale(1,2)] font-bold text-center text-white bg-clip-text blur-[0.5px]">
+              <div className="flex items-start">
+                <div className="text-4xl md:text-[13rem]">
+                  {text}
+                </div>
+                <div className="md:block hidden text-5 pt-10 text-yellow-300 pl-2">
+                  {`[0${index + 1}]`}
+                </div>
               </div>
-              <div className="md:block hidden text-5 pt-10 text-yellow-300 pl-2">
-                {`[0${index+1}]`}
-              </div>
-            </div>
 
-          </h1>
-        </div>
-      ))}
+            </h1>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
+
+
+
