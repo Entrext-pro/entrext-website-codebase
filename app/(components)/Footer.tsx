@@ -42,7 +42,7 @@ function MobileFooter() {
         <h1 className="font-[900] text-2xl">Extrext</h1>
         <div className="flex gap-3 text-sm">
           <a className="hover:text-yellow-300" href="#">Instagram</a>
-          <p>//</p>
+          <p>{"//"}</p>
           <a className="hover:text-yellow-300" href="#">Linkedin</a>
         </div>
       </div>
@@ -50,7 +50,7 @@ function MobileFooter() {
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-4">
           <p className="text-black text-xl w-8 h-8 bg-white rounded-full flex items-center justify-center">D</p>
-          <h1 className="text-3xl font-[700] tracking-tight">LET'S TALK</h1>
+          <h1 className="text-3xl font-[700] tracking-tight">{"LET'S TALK"}</h1>
         </div>
 
         <div className="pl-2">
@@ -59,7 +59,7 @@ function MobileFooter() {
       </div>
       <div className="flex justify-center gap-4 text-xs text-gray-400 pt-4 border-t border-white/20">
         <p>&copy; Extrext</p>
-        <p>All rights reserved ‘25</p>
+        <p>{"All rights reserved ‘25"}</p>
       </div>
     </div>
   );
@@ -77,7 +77,7 @@ function DesktopFooter() {
         <div className="flex flex-col gap-10">
           <div className="flex">
             <p className="text-black text-xl w-10 h-10 bg-white rounded-full flex items-center justify-center">D</p>
-            <h1 className="text-9xl font-[700] tracking-tighter">LET'S TALK</h1>
+            <h1 className="text-9xl font-[700] tracking-tighter">{"LET'S TALK"}</h1>
           </div>
 
           <div className="text-center mt-8 ml-8">
@@ -93,7 +93,7 @@ function DesktopFooter() {
 
       <div className="flex gap-3 text-xl">
         <a className="hover:text-yellow-300" href="">Instagram</a>
-        <p>//</p>
+        <p>{"//"}</p>
         <a className="hover:text-yellow-300" href="">Linkedin</a>
       </div>
     </div>
