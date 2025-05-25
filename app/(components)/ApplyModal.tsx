@@ -10,7 +10,7 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
         <FramerModal open={open} setOpen={setOpen}>
             <ModalContent>
                 <div className='font-mono flex flex-col space-y-1.5 text-center sm:text-left'>
-                    <h2 className='text-lg font-semibold leading-none text-center tracking-tight'>
+                    <h2 className='text-2xl font-semibold leading-none text-center tracking-tight'>
                         Apply for?
                     </h2>
                     <div className='grid gap-4 py-4'>

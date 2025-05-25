@@ -112,11 +112,11 @@ export default function Header() {
 
 function Navigate({ text,onClick }: { text: string, onClick?:()=>void }) {
   return (
-    <Link href="">
+    <div>
       <div onClick={onClick} className="relative font-mono text-[18px] font-[300] hover:text-gray-500 transition-all ease-in-out delay-75 group cursor-pointer">
         {text}
         <span className="absolute left-1/2 bottom-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 ease-in-out transform -translate-x-1/2 origin-center group-hover:w-full group-hover:-translate-x-1/2 group-hover:origin-left"></span>
       </div>
-    </Link>
+    </div>
   );
 }

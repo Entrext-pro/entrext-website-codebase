@@ -32,7 +32,7 @@ export function Service() {
           className="text-lg md:text-2xl md:pl-10 w-full md:w-[700px]"
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nulla ab natus animi itaque nisi minus quisquam excepturi saepe nobis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis officiis cupiditate ab distinctio quae sed eum, dicta doloribus quia quidem!
+            We’re open to partnerships with visionary non-tech founders, content creators, and strong operators.  If you have a compelling idea, a talent for content, or skills in distribution, branding, or tech, let’s talk. We partner on a model that supports co-creation and leadership.
           </p>
         </motion.div>
       </div>
@@ -55,7 +55,7 @@ export function Service() {
           />
           <Content
             title="Partnership with Content Creator Marketors"
-            content="If you believe you are great at creating content and want to partner with a product that resonates with you — or have an idea for one — reach out to us!"
+            content="If you believe you are great at creating content and want to partner with a product that resonates with you or have an idea for one reach out to us!"
             number={2}
           />
           <Content
@@ -97,6 +97,19 @@ function Content({
           </div>
 
           <div className="mt-6 md:ml-0 md:text-lg leading-relaxed">{content}</div>
+
+          <button
+            onClick={() => alert("Partnership")}
+            className="relative mt-5 md:p-3 px-2 py-1 border-2 border-black/85 md:text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
+          >
+            <span className="relative z-20 transition-colors duration-500 group-hover:text-white">
+              Apply
+            </span>
+            <span
+              className="absolute inset-0 w-0 bg-black/85 z-10 transition-all duration-500 ease-in-out group-hover:w-full"
+              style={{ zIndex: 0 }}
+            />
+          </button>
         </div>
       </div>
     </motion.div>
