@@ -20,9 +20,9 @@ export function Service() {
           initial={{ opacity: 0, y: 50 }}
           animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-9xl font-medium leading-none "
+          className="text-4xl md:text-9xl font-medium leading-none "
         >
-          <span className="md:pl-10">Partnerships</span>
+          <span className="md:pl-10 pl-2 tracking-tighter">Partnerships</span>
         </motion.div>
 
         <motion.div
