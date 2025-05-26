@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Home from "./(animations)/Gloabe";
+import { RetroGridDemo } from "./RetroGridDemo";
 
 const line1 = "ENTERING";
 const line2 = "THE NEXT ERA";
@@ -70,8 +71,8 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className={`relative overflow-hidden w-full h-[500px] lg:h-[800px] md:my-24 mt-10 ${isMobile ? 'pointer-events-none':""}`}>
-                <Home/>
+            <div className={`relative overflow-hidden w-full h-[400px] lg:h-[800px] md:my-24 mt-16`}>
+                <RetroGridDemo/>
             </div>
         </div>
     );

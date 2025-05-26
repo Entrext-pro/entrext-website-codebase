@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function GoToPage(){
     return (
-        <div className="relative flex justify-center mb-5 gap-10 border-b-2 pb-72 ">
+        <div className="relative flex justify-center gap-10 border-b-2 md:pb-72 pb-30">
             <Image
                 src={curlyArrow}
                 alt="Arrow"

@@ -1,6 +1,6 @@
 export default function CurvedTextLine() {
     return (
-        <div className="w-full flex justify-center md:my-72 mt-52 ">
+        <div className="w-full flex justify-center md:my-72 mt-30 ">
             <div className="block sm:hidden">
                 <CurvedTextLineMobile />
             </div>

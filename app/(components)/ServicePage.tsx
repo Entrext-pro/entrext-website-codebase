@@ -13,7 +13,7 @@ export function Service() {
   const isDescInView = useInView(descRef, { once: true });
 
   return (
-    <div className="font-mono mt-56 mb-28">
+    <div className="font-mono md:mt-56 mt-30 mb-28">
       <div className="flex px-4 md:mb-32 justify-around flex-col md:flex-row gap-20">
         <motion.div
           ref={titleRef}
@@ -88,7 +88,7 @@ function Content({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="md:w-2xl w-full md:pt-0 pt-20 border-t-2 md:h-[400px] flex items-center border-gray-500 "
+      className="md:w-2xl w-full md:pt-0 pt-10 border-t-2 md:h-[400px] flex items-center border-gray-500 "
     >
       <div className="flex md:gap-6 ">
         <div className="md:w-sm text-xl pt-2">{`(0${number})`}</div>
@@ -109,7 +109,7 @@ function Content({
 function CreativeBtn() {
   return (
     <>
-      <div className='group relative cursor-pointer p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold text-xl mt-2'>
+      <div className='group relative cursor-pointer p-2 md:w-32 w-24 border bg-white rounded-full overflow-hidden text-black text-center font-semibold md:text-xl mt-2'>
         <span className='translate-x-1 group-hover:translate-x-12 group-hover:opacity-0 transition-all duration-300 inline-block ml-3'>
           About
         </span>

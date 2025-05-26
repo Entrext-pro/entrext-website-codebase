@@ -3,10 +3,8 @@
 import { useState } from "react";
 import CurvedWords from "./(components)/CurvedWords";
 import FAQSection from "./(components)/FAQ";
-import Footer from "./(components)/Footer";
 import Header from "./(components)/Header";
 import Hero from "./(components)/Hero";
-import ScrollTextBlur from "./(components)/ScrollWorldNew";
 import { Service } from "./(components)/ServicePage";
 import StackingCards from "./(components)/StackingCard";
 import SubHero from "./(components)/SubHero";
@@ -14,6 +12,8 @@ import SubHeroInfo from "./(components)/SubHeroInfo";
 import LoaderLogic from "./(components)/Loader";
 import useLenis from "@/hook/useLenis";
 import GoToPage from "./(components)/GoToPage";
+import GlobeDemo from "./(components)/(animations)/Gloabe";
+import { Footer } from "./(components)/Footer";
 
 export default function Home() {
   useLenis();
@@ -32,10 +32,14 @@ export default function Home() {
             <SubHeroInfo />
           </div>
 
-          <div className="">
+          {/* <div className="">
              <ScrollTextBlur />
-          </div>
+          </div> */}
           
+          <div className={`relative overflow-hidden w-full h-[500px] lg:h-[800px] md:my-24 mb-36 `}>
+                <GlobeDemo/>
+            </div>
+
           <div className="">
              <StackingCards />
           </div>
@@ -45,6 +49,8 @@ export default function Home() {
             <GoToPage/>
             <FAQSection />
           </div>
+
+          <Footer/>
         </div>
       )}
     </>

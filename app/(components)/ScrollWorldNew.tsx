@@ -39,7 +39,7 @@ export default function ScrollTextBlur() {
   }, [])
 
   return (
-    <div className=" bg-black min-h-screen md:h-[2500px] font-mono flex flex-col items-center md:justify-center md:py-10 p-4  overflow-hidden">
+    <div className=" bg-black md:min-h-screen md:h-[2500px]  font-mono flex flex-col items-center md:justify-center md:py-10 py-4  overflow-hidden">
 
       <div className="">
         {textItems.map((text, index) => (
@@ -55,7 +55,7 @@ export default function ScrollTextBlur() {
           >
             <h1 className="tracking-tighter [transform:scale(1,2)] font-bold text-center text-white bg-clip-text blur-[0.5px]">
               <div className="flex items-start">
-                <div className="text-5xl md:text-[12vw]">
+                <div className="text-5xl md:text-[12vw] md:mt-0 mt-5">
                   {text}
                 </div>
                 <div className="md:block hidden text-5 pt-10 text-yellow-300 pl-2">
