@@ -38,8 +38,8 @@ export default function SubHeroInfo() {
     // Use \n\n to mark paragraph breaks
     const fullText = [
         "At Entrext, our journey is shaped by three core beliefs.",
-        "It starts with ownership. We don’t hire leaders—we grow them. Everyone who joins us is seen as a future founder. You’re here because you believe in building something that truly matters.",
-        "Next, we don’t chase trends or go wide just to go global. We don’t want 1,000 people to just “like” what we make—we want 100 people to love it. Deeply. Passionately.",
+        "It starts with ownership. We don’t hire leaders, we grow them. Everyone who joins us is seen as a future founder. You’re here because you believe in building something that truly matters.",
+        "Next, we don’t chase trends or go wide just to go global. We don’t want 1,000 people to just “like” what we make, we want 100 people to love it. Deeply. Passionately.",
         "And most importantly, we believe in learning by doing. We move fast because tech moves fast. We try, we fail, we adapt. If one success rises out of a thousand failures, that’s still a win.",
         "Because at the end of the day, we want people to feel not just satisfied. We don’t hide behind screens or systems. We’re just one call away."
     ].join('\n\n'); // Mark paragraph breaks
