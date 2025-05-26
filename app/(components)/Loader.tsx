@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Home from "./(animations)/Gloabe";
+import { RetroGridDemo } from "./RetroGridDemo";
 
 export default function LoaderLogic({ onComplete }: { onComplete: () => void }) {
   const [done, setDone] = useState(false);
@@ -89,6 +90,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
 
           <div className="absolute opacity-0 pointer-events-none inset-0">
             <Home />
+            <RetroGridDemo/>
           </div>
         </motion.div>
       )}
