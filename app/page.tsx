@@ -13,6 +13,7 @@ import SubHero from "./(components)/SubHero";
 import SubHeroInfo from "./(components)/SubHeroInfo";
 import LoaderLogic from "./(components)/Loader";
 import useLenis from "@/hook/useLenis";
+import GoToPage from "./(components)/GoToPage";
 
 export default function Home() {
   useLenis();
@@ -29,12 +30,21 @@ export default function Home() {
             <CurvedWords />
             <SubHero />
             <SubHeroInfo />
-            <ScrollTextBlur />
-            <StackingCards />
+          </div>
+
+          <div className="">
+             <ScrollTextBlur />
+          </div>
+          
+          <div className="">
+             <StackingCards />
+          </div>
+         
+          <div className="m-2">
             <Service />
+            <GoToPage/>
             <FAQSection />
           </div>
-          <Footer />
         </div>
       )}
     </>

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Home from "./(animations)/Bolb";
+import Home from "./(animations)/Gloabe";
 
 export default function LoaderLogic({ onComplete }: { onComplete: () => void }) {
   const [done, setDone] = useState(false);
@@ -27,7 +27,6 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
           className="fixed inset-0 z-50 bg-white flex items-center justify-center"
         >
           <div className="text-center">
-            {/* Animated Letters */}
             <div className="relative">
               {letters.map((letter, index) => (
                 <motion.span
@@ -46,7 +45,6 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
               ))}
             </div>
 
-            {/* Loading Dots */}
             <motion.div
               className="flex justify-center space-x-1 mt-8"
               initial={{ opacity: 0 }}
@@ -71,7 +69,6 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
               ))}
             </motion.div>
 
-            {/* Loading Bar */}
             <motion.div
               className="w-48 h-0.5 bg-gray-200 mx-auto mt-6 overflow-hidden"
               initial={{ opacity: 0 }}

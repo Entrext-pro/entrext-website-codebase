@@ -30,7 +30,7 @@ export default function SubHero() {
     }, [isInView, controls]);
 
     return (
-        <div className="md:mt-20 font-mono overflow-hidden md:mb-40 mb-20" ref={ref}>
+        <div className="md:mt-20 font-mono overflow-hidden md:mb-56 mb-20 md:px-20" ref={ref}>
             <div className="overflow-hidden">
                 <motion.div
                     className="w-full flex md:justify-end justify-center md:text-3xl"
@@ -38,7 +38,7 @@ export default function SubHero() {
                     animate={controls}
                     variants={fadeFromRight}
                 >
-                    <div className="md:w-2xl w-[300px] md:text-left ">
+                    <div className="md:w-2xl w-[300px] md:text-left">
                         <div className="font-[500] uppercase md:mt-0 md:ml-0 ml-3">
                             A product studio ☴ that turns everyday problems into smart,
                             useful
@@ -50,7 +50,7 @@ export default function SubHero() {
                 </motion.div>
             </div>
 
-            <div className="overflow-hidden md:mb-52 mb-3">
+            <div className="overflow-hidden md:mb-96 mb-3">
                 <motion.div
                     className="flex justify-between mt-2"
                     initial="hidden"
@@ -79,51 +79,45 @@ export default function SubHero() {
 }
 
 function AnimatedColoredText({ text }: { text: string }) {
-    const base = "#000000"; 
-    const enColor = "#E6582A";      
-    const trColor = "#714438";      
-    const exColor = "#D6DCC5";  
-    const grColor = '#A0C878';    
+    const base = "#222222"; 
+    const white = "#C0C0C0"; 
 
     const stages: Array<Record<number, string>> = [
-       
-        {
-            0: enColor,
-            1: enColor,
-            2: trColor, 
-            3: trColor, 
-            4: exColor, 
-            5: exColor, 
-            6: grColor,  
-        },
-
         {
             0: base,
             1: base,
-            2: trColor,
-            3: trColor,
-            4: exColor,
-            5: exColor,
-            6: grColor,
-        },
-        {
-            0: enColor,
-            1: enColor,
             2: base,
             3: base,
-            4: exColor,
-            5: exColor,
-            6: grColor,
-        },
-
-        {
-            0: enColor,
-            1: enColor,
-            2: trColor,
-            3: trColor,
             4: base,
             5: base,
             6: base,
+        },
+        {
+            0: white,
+            1: white,
+            2: base,
+            3: base,
+            4: base,
+            5: base,
+            6: base,
+        },
+        {
+            0: base,
+            1: base,
+            2: white,
+            3: white,
+            4: base,
+            5: base,
+            6: base,
+        },
+        {
+            0: base,
+            1: base,
+            2: base,
+            3: base,
+            4: white,
+            5: white,
+            6: white,
         },
     ];
 

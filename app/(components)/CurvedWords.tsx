@@ -1,6 +1,6 @@
 export default function CurvedTextLine() {
     return (
-        <div className="w-full flex justify-center md:my-52 mt-52 ">
+        <div className="w-full flex justify-center md:my-72 mt-52 ">
             <div className="block sm:hidden">
                 <CurvedTextLineMobile />
             </div>
@@ -13,17 +13,20 @@ export default function CurvedTextLine() {
 
 function CurvedTextLineDesktop() {
     return (
-        <svg viewBox="0 0 1600 200" className="w-full h-[200px]" preserveAspectRatio="none">
+        <svg viewBox="0 0 1600 250" className="w-full h-[200px]" preserveAspectRatio="none">
             <path
                 id="curvePathDesktop"
-                d="M 0 150 Q 400 50, 800 150 T 1600 150"
+                d="M 0 150 
+                   Q 200 70, 400 150 
+                   Q 600 250, 800 150 
+                   Q 1000 50, 1200 150 
+                   Q 1400 250, 1600 150"
                 fill="transparent"
                 stroke="transparent"
-                
             />
-            <text fontSize="44" fill="#000" >
-                <textPath href="#curvePathDesktop">
-                    founders individuals niche customer B2B org student founders individuals niche customer B2B org student
+            <text fontSize="50" fill="#000">
+                <textPath href="#curvePathDesktop" startOffset="0%">
+                    founders individuals niche customer B2B org student founders individuals niche customer B2B org student founders individuals niche customer B2B org student
                 </textPath>
             </text>
         </svg>

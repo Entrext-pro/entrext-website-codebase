@@ -1,8 +1,9 @@
 'use client';
-import Flow from "@/public/extrextFLow.png";
+import Flow from "@/public/entrextflow.png";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 export function Service() {
   const titleRef = useRef(null);
@@ -12,16 +13,16 @@ export function Service() {
   const isDescInView = useInView(descRef, { once: true });
 
   return (
-    <div className="font-mono">
-      <div className="flex px-4 md:px-20 justify-between flex-col md:flex-row gap-10">
+    <div className="font-mono mt-56 mb-28">
+      <div className="flex px-4 md:mb-32 justify-around flex-col md:flex-row gap-20">
         <motion.div
           ref={titleRef}
           initial={{ opacity: 0, y: 50 }}
           animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-8xl font-medium leading-none "
+          className="text-5xl md:text-9xl font-medium leading-none "
         >
-          <span className="md:pl-10">Partnership</span>
+          <span className="md:pl-10">Partnerships</span>
         </motion.div>
 
         <motion.div
@@ -36,8 +37,8 @@ export function Service() {
           </p>
         </motion.div>
       </div>
-      <div className="px-5 md:px-20 flex flex-col lg:flex-row justify-between gap-12 mt-10">
-        <div className="w-full md:w-[45%] overflow-hidden flex justify-center items-center">
+      <div className="px-5 flex flex-col lg:flex-row justify-around gap-12 mt-10">
+        <div className="w-full md:w-[40%] overflow-hidden flex items-start">
           <Image
             priority
             className="w-full md:h-auto max-w-[1000px] object-contain"
@@ -87,7 +88,7 @@ function Content({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="md:w-2xl w-full md:pt-0 pt-10 border-t-2 md:h-[300px] flex items-center border-gray-500 "
+      className="md:w-2xl w-full md:pt-0 pt-20 border-t-2 md:h-[400px] flex items-center border-gray-500 "
     >
       <div className="flex md:gap-6 ">
         <div className="md:w-sm text-xl pt-2">{`(0${number})`}</div>
@@ -96,22 +97,29 @@ function Content({
             <h4 className="inline-block">{title}</h4>
           </div>
 
-          <div className="mt-6 md:ml-0 md:text-lg leading-relaxed">{content}</div>
+          <div className="mt-6 md:ml-0 md:text-xl leading-relaxed">{content}</div>
 
-          <button
-            onClick={() => alert("Partnership")}
-            className="relative mt-5 md:p-3 px-2 py-1 border-2 border-black/85 md:text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
-          >
-            <span className="relative z-20 transition-colors duration-500 group-hover:text-white">
-              Apply
-            </span>
-            <span
-              className="absolute inset-0 w-0 bg-black/85 z-10 transition-all duration-500 ease-in-out group-hover:w-full"
-              style={{ zIndex: 0 }}
-            />
-          </button>
+          <CreativeBtn/>
         </div>
       </div>
     </motion.div>
   );
 }
+
+function CreativeBtn() {
+  return (
+    <>
+      <div className='group relative cursor-pointer p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold text-xl mt-2'>
+        <span className='translate-x-1 group-hover:translate-x-12 group-hover:opacity-0 transition-all duration-300 inline-block ml-3'>
+          About
+        </span>
+        <div className='flex gap-5 text-white z-10 items-center absolute top-0 h-full w-full justify-center translate-x-12 opacity-0 group-hover:-translate-x-1 group-hover:opacity-100 transition-all duration-300'>
+          <span>About</span>
+          <ArrowRight />
+        </div>
+        <div className='absolute top-[40%] left-[20%] h-2 w-2 group-hover:h-full group-hover:w-full rounded-lg bg-black scale-[1] group-hover:bg-yellow-400 group-hover:scale-[1.8] transition-all duration-300 group-hover:top-[0%] group-hover:left-[0%] '></div>
+      </div>
+    </>
+  );
+}
+
