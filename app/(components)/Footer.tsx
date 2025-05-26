@@ -1,5 +1,6 @@
 import Image1 from "@/public/1.png"
 import Image from "next/image";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -38,28 +39,28 @@ export const Footer = () => {
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Partnerships
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Products
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Culture
-                  </link>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -69,44 +70,44 @@ export const Footer = () => {
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Micro SaaS
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     AI-powered tools
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Voice Assistants
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Marketplaces
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Games
-                  </link>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -116,20 +117,20 @@ export const Footer = () => {
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Privacy Policy
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Terms of Service
-                  </link>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -139,36 +140,36 @@ export const Footer = () => {
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Instagram
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Email
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Youtube
-                  </link>
+                  </Link>
                 </li>
                 <li>
-                  <link
+                  <Link
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Linkedlin
-                  </link>
+                  </Link>
                 </li>
               </ul>
             </div>
