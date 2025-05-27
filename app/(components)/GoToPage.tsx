@@ -1,6 +1,7 @@
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import curlyArrow from "@/public/curly-image.png"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function GoToPage(){
     return (
@@ -18,6 +19,9 @@ export default function GoToPage(){
 
 
 export function ShinyButtonDemo() {
-  return <ShinyButton className="px-10 py-4">Go to Partnerships</ShinyButton>;
+    const router = useRouter();
+  return <ShinyButton className="px-10 py-4" onClick={()=>{
+    router.push("/partnerships")
+  }}>Go to Partnerships</ShinyButton>;
 }
 

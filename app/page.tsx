@@ -25,7 +25,6 @@ export default function Home() {
       {showSite && (
         <div>
           <div className="m-2">
-            <Header />
             <Hero />
             <CurvedWords />
             <SubHero />
@@ -49,8 +48,6 @@ export default function Home() {
             <GoToPage/>
             <FAQSection />
           </div>
-
-          <Footer/>
         </div>
       )}
     </>

@@ -8,8 +8,10 @@ import Image1 from "@/public/1.png"
 import Image2 from "@/public/2.png"
 import Image from "next/image";
 import ApplyModal from "./ApplyModal";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [applyModalOpen, setApplyModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -24,13 +26,16 @@ export default function Header() {
 
 
   return (
-    <div className="sticky top-0 z-50 py-5 bg-white">
+    <div className="sticky top-0 px-10 z-50 py-5 bg-white">
       <div className="flex justify-between items-center ">
         <motion.div
           initial={false}
           animate={{ rotate: scrolled ? 360 : 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="md:size-16 size-10 relative"
+          className="md:size-16 size-10 relative cursor-pointer"
+          onClick={()=>{
+            router.push("/")
+          }}
         >
           <Image
             src={scrolled ? Image2 : Image1}
@@ -42,7 +47,7 @@ export default function Header() {
 
 
         <div className="md:flex gap-32 mr-10 hidden">
-          <Navigate text="Partnerships" />
+          <Navigate text="Partnerships" onClick={()=> router.push("/partnerships")} />
           <Navigate text="Products" />
           <Navigate text="Culture" />
           <Navigate text="Apply" onClick={() => setApplyModalOpen(true)} />

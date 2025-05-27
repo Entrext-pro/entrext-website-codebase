@@ -3,57 +3,68 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 const FAQContent = [
-    {
-        id: 1,
-        title: "What is the AI Product Partnership model?",
-        Description: "This is an equity-based program where we partner with:Non-tech founders with AI product ideas but no technical skills. Content creators who want to be the face of an AI product. Community users who are interested in using or testing our AI products. Instead of charging upfront fees, we take 30-40% equity for full product development or 20% equity if you're a content creator helping grow the product"
-    },
-    {
-        id: 2,
-        title: "What kind of AI products do you develop?",
-        Description: "We focus on AI-driven tools that have market potential, including: AI-powered content creation tools, AI-driven automation platforms AI SaaS (Software as a Service) products, AI marketing and analytics tools , AI chatbots and virtual assistants"
-    },
-    {
-        id: 3,
-        title: "Who can apply for this partnership?",
-        Description: "Non-tech founders who have a great AI product idea but no technical expertise. Content creators who want to promote and scale an AI product. Community members who want early access to cutting-edge AI products."
-    },
-    {
-        id: 4,
-        title: "What's the difference between the Non-Tech Founder? and the Content Creator Plan? ",
-        Description: "Non-Tech Founder Plan (30-40% Equity) → We build your entire AI product from scratch, handling development, design,and strategy. Content Creator Plan (20% Equity) → You become the face of an AI product, creating content to grow its user base."
-    },
-    {
-        id: 5,
-        title: "How can community users get involved?",
-        Description: "If you're not a founder or content creator but still interested in AI products, you can: 🔹 Test beta versions of our AI products before public launch. 🔹 Provide feedback on product features and improvements. 🔹 Join our community to stay updated on upcoming AI launches."
-    },
-    {
-        id: 6,
-        title: "Do I need to invest any money?",
-        Description: "For Non-Tech Founders: No upfront cost, but if the product requires fixed expenses (APIs, cloud hosting, licenses), you need to cover those. For Content Creators & Community Users: No financial investment required."
-    },
-    {
-        id: 7,
-        title: "How long does it take to build an AI product?",
-        Description: "We typically launch an MVP (Minimum Viable Product) within 2-4 months, depending on the complexity."
-    },
-    {
-        id: 8,
-        title: "Can i bring my own team?",
-        Description: "Yes! If you have developers, designers, or marketers, we can collaborate while still leading AI development."
-    },
-    {
-        id: 9,
-        title: "What happens if I raise funding?",
-        Description: "If you're raising investment, you must inform us so we can align our strategy with your funding goals."
-    },
-    {
-        id: 10,
-        title: "What happens if my AI product doesn't succeed?",
-        Description: "We’re committed to long-term success. If the product doesn’t perform well, we’ll work on iterations, pivot strategies, or explore new opportunities for monetization."
-    },
+  {
+    id: 1,
+    title: "What kinds of problems do Entrext products solve?",
+    Description:
+      "Our apps tackle everyday friction points—like finding parking faster, managing time more effectively, or turning hobbies into marketplaces—by combining AI automation with community‑driven design principles.",
+  },
+  {
+    id: 2,
+    title: "Are Entrext products secure and private?",
+    Description:
+      "Yes. We follow industry‑standard encryption, GDPR and CCPA compliance, and routine third‑party audits to protect your data.",
+  },
+  {
+    id: 3,
+    title: "How do I know a new Entrext app is right for me?",
+    Description:
+      "Before launch, each product goes through community beta testing.\nYou can join our waitlist to try early versions and give feedback—so you choose tools shaped by real users like you.",
+  },
+  {
+    id: 4,
+    title: "What devices and platforms do you support?",
+    Description:
+      "Our Micro‑SaaS and AI tools are web‑first and mobile‑optimized (iOS and Android), with voice‑assistant integrations (Alexa, Google Assistant) available on launch.",
+  },
+  {
+    id: 5,
+    title: "How much do your products cost?",
+    Description:
+      "We offer freemium entry‑points for most apps, with tiered subscriptions or usage‑based pricing on advanced features—so you pay only for what you use.",
+  },
+  {
+    id: 6,
+    title: "Can I suggest new features or improvements?",
+    Description:
+      "Absolutely. Every product includes an in‑app feedback widget.\nOur community‑driven roadmap is updated monthly based on real user votes.",
+  },
+  {
+    id: 7,
+    title: "What if I encounter a bug or issue?",
+    Description:
+      "Report it via the “Help & Feedback” section in the app or email support.\nWe commit to a 48‑hour turnaround for critical fixes, backed by our SLA.",
+  },
+  {
+    id: 8,
+    title: "Do Entrext apps integrate with other tools I use?",
+    Description:
+      "Yes—most products offer API access and out‑of‑the‑box connectors for popular services (Slack, Zapier, Google Workspace) to fit seamlessly into your workflow.",
+  },
+  {
+    id: 9,
+    title: "How do I join the beta or early‑access program?",
+    Description:
+      "Click “Join Waitlist” on any product page.\nYou’ll receive an invite link, Slack access, and exclusive preview builds as they roll out.",
+  },
+  {
+    id: 10,
+    title: "Who builds these products and how can I trust their quality?",
+    Description:
+      "Every tool is co‑built by our in‑house studio team and vetted community experts.\nOur profit‑share model ensures we only succeed when you do—so quality and your satisfaction are our top priorities.",
+  },
 ];
+
 
 export default function FAQSection() {
     return (

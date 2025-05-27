@@ -40,7 +40,7 @@ export const Footer = () => {
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
-                    href="/"
+                    href="/partnerships"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Partnerships
