@@ -52,7 +52,7 @@ export default function Partnerships() {
 }
 
 
-export function FocusCardsDemo() {
+function FocusCardsDemo() {
     const cards = [
         {
             title: "Non-Tech Founders",
@@ -67,7 +67,7 @@ export function FocusCardsDemo() {
     return <FocusCards cards={cards} />;
 }
 
-export function WhyPartner(){
+function WhyPartner(){
     return <div className="flex flex-col w-[1600px] mt-56 gap-5 border border-slate-600 rounded-2xl p-10 shadow-md">
         <div>
             <h1 className="text-5xl font-[600]">Why Partner With Us?</h1>
