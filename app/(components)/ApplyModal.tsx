@@ -1,11 +1,13 @@
 "use client"
 import { FramerModal, ModalContent } from "@/ui-components/DialogBox";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> = ({
     open,
     setOpen,
 }) => {
+    const redirect = useRouter()
     return (
         <FramerModal open={open} setOpen={setOpen}>
             <ModalContent>
@@ -15,7 +17,9 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
                     </h2>
                     <div className='grid gap-4 py-4'>
                         <button
-                            onClick={() => alert("Partnership")}
+                            onClick={() => {
+                                redirect.push("https://deformity.ai/d/C-P5znqtG_ZZ")
+                            }}
                             className="relative w-full p-3 border-2 border-black text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
                         >
                             <span className="relative z-20 transition-colors duration-500 group-hover:text-white">
@@ -27,7 +31,7 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
                             />
                         </button>
 
-                        <button
+                        {/* <button
                             onClick={() => alert("Content Creator")}
                             className="relative w-full p-3 border-2 border-black text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
                         >
@@ -38,7 +42,7 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
                                 className="absolute inset-0 w-0 bg-black/85 z-10 transition-all duration-500 ease-in-out group-hover:w-full"
                                 style={{ zIndex: 0 }}
                             />
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </ModalContent>

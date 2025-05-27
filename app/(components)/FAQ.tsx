@@ -7,63 +7,64 @@ const FAQContent = [
     id: 1,
     title: "What kinds of problems do Entrext products solve?",
     Description:
-      "Our apps tackle everyday friction points—like finding parking faster, managing time more effectively, or turning hobbies into marketplaces—by combining AI automation with community‑driven design principles.",
+      "We build tools and apps that solve real, everyday problems — whether it’s something as small as saving a few minutes a day or as big as creating a new way to connect people. If it improves life in a useful, smart way, we’re interested. We don't chase trends — we focus on things that truly matter to people.",
   },
   {
     id: 2,
     title: "Are Entrext products secure and private?",
     Description:
-      "Yes. We follow industry‑standard encryption, GDPR and CCPA compliance, and routine third‑party audits to protect your data.",
+      "We treat your trust seriously. Everything we build follows best practices around data safety and privacy. But more than rules, we’re a small and tight-knit studio — our goal is never to be extractive. We believe in honest relationships, not just user metrics.",
   },
   {
     id: 3,
     title: "How do I know a new Entrext app is right for me?",
     Description:
-      "Before launch, each product goes through community beta testing.\nYou can join our waitlist to try early versions and give feedback—so you choose tools shaped by real users like you.",
+      "We don’t push products. We co-build them. Every app goes through testing with real users who care about the problem. If you’re part of our early community, your feedback actually shapes what the product becomes — not just some checkbox at the end.",
   },
   {
     id: 4,
     title: "What devices and platforms do you support?",
     Description:
-      "Our Micro‑SaaS and AI tools are web‑first and mobile‑optimized (iOS and Android), with voice‑assistant integrations (Alexa, Google Assistant) available on launch.",
+      "We build where people live. That usually means mobile-first and web-ready. We keep it flexible so you don’t have to change your habits to use what we make.",
   },
   {
     id: 5,
     title: "How much do your products cost?",
     Description:
-      "We offer freemium entry‑points for most apps, with tiered subscriptions or usage‑based pricing on advanced features—so you pay only for what you use.",
+      "Most things start free, and if there's a cost, it grows with your usage or need. We don’t believe in locking people out with pricing. If you love what we build and want more, we’ll grow with you.",
   },
   {
     id: 6,
     title: "Can I suggest new features or improvements?",
     Description:
-      "Absolutely. Every product includes an in‑app feedback widget.\nOur community‑driven roadmap is updated monthly based on real user votes.",
+      "Absolutely — not only can you, we want you to. Every product is built with feedback from real users. If you’re passionate and invested, your voice directly shapes what we make. Our roadmap is open and driven by the community. Mail us at feedbacks@entrext.in",
   },
   {
     id: 7,
     title: "What if I encounter a bug or issue?",
     Description:
-      "Report it via the “Help & Feedback” section in the app or email support.\nWe commit to a 48‑hour turnaround for critical fixes, backed by our SLA.",
+      "Reach out to us directly — we don’t hide behind helpdesks. You can message us in the app or through email. We care about what we build, and we fix fast because we believe in learning and improving by doing.",
   },
   {
     id: 8,
     title: "Do Entrext apps integrate with other tools I use?",
     Description:
-      "Yes—most products offer API access and out‑of‑the‑box connectors for popular services (Slack, Zapier, Google Workspace) to fit seamlessly into your workflow.",
+      "If it makes your workflow easier, yes. We build things that work well with other services. Whether that’s Slack, Google, or tools you already rely on, we want our products to feel like they belong — not like extra work.",
   },
   {
     id: 9,
-    title: "How do I join the beta or early‑access program?",
+    title: "How do I join the beta or early-access program?",
     Description:
-      "Click “Join Waitlist” on any product page.\nYou’ll receive an invite link, Slack access, and exclusive preview builds as they roll out.",
+      "You can join the waitlist for any product we’re working on. Once you're in, you get early builds, behind-the-scenes access, and the chance to help shape what gets built. We’re building with you, not just for you. We are also working on our exclusive community where we’ll give early users early experiences across all upcoming Entrext products.",
   },
   {
     id: 10,
     title: "Who builds these products and how can I trust their quality?",
     Description:
-      "Every tool is co‑built by our in‑house studio team and vetted community experts.\nOur profit‑share model ensures we only succeed when you do—so quality and your satisfaction are our top priorities.",
+      "Everything is built by our in-house team and people we partner with — creators, founders, technologists, and community leaders. We work with people who care deeply about what they build. And since we share ownership and rewards, our success only happens when the product actually works for you.",
   },
 ];
+
 
 
 export default function FAQSection() {

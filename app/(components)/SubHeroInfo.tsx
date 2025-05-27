@@ -107,7 +107,7 @@ export default function SubHeroInfo() {
       })
 
       return (
-        <p key={pi} className="mb-5 flex flex-wrap leading-relaxed">
+        <p key={pi} className="mb-5 flex flex-wrap leading-relaxed md:ml-0 ml-2">
           {animatedWords}
         </p>
       )
@@ -120,7 +120,7 @@ export default function SubHeroInfo() {
       ref={ref}
     >
       <div className="md:w-[800px] lg:w-[1000px] w-full md:text-2xl space-y-5">{renderAnimatedText(fullText)}</div>
-      <div className="w-[200px] text-md lg:text-xl lg:w-[250px] font-mono md:mb-0 mb-5">
+      <div className="w-[200px] text-md lg:text-xl lg:w-[250px] font-mono md:mb-0 mb-14 md:ml-0 ml-2">
         <h4>Why Entrext should matter to you?</h4>
         <p>{"[Fundamental roots]"}</p>
       </div>

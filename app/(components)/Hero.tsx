@@ -16,7 +16,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="relative overflow-hidden w-full h-[400px] lg:h-[800px] mt-16">
+            <div className="relative overflow-hidden w-full h-[400px] lg:h-[800px] md:mt-16 md:mb-0 mb-32">
                 <RetroGridDemo />
             </div>
         </div>

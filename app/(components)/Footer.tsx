@@ -21,10 +21,10 @@ export const Footer = () => {
             <div className="mt-4 flex gap-3 items-center">
               <div>
                 <Image
-                src={Image1}
-                alt="Entrext Logo"
-                className="object-contain size-8 rounded-md"
-              />
+                  src={Image1}
+                  alt="Entrext Logo"
+                  className="object-contain size-8 rounded-md"
+                />
               </div>
               <p className="text-5xl font-[800] text-deep-purple-50">
                 Entrext
@@ -48,18 +48,11 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="https://deformity.ai/d/C-P5znqtG_ZZ"
+                    target="_blank"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Culture
+                    Apply
                   </Link>
                 </li>
               </ul>
@@ -140,32 +133,18 @@ export const Footer = () => {
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <Link
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Instagram
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
+                  <a
+                    href="mailto:business@entrext.in"
+                    target="_blank"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Email
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Youtube
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
+                    href="https://www.linkedin.com/company/entrext/"
+                    target="_blank"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
                     Linkedlin
@@ -179,7 +158,7 @@ export const Footer = () => {
           <p className="text-lg">
             © Copyright 2025 All rights reserved.
           </p>
-          
+
         </div>
       </div>
     </div>

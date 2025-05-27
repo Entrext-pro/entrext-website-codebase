@@ -19,8 +19,8 @@ const cards = [
     color: "#8f89ff",
   },
   {
-    title: "Zissou",
-    description: "Though he views photography as a medium for storytelling, Zissou's images don't insist on a narrative.",
+    title: "Friendsin",
+    description: "Dare game where you and friends complete monthly challenges to win a big trip at the end of the year.",
     link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
     color: "#4B70F5",
   },
@@ -36,6 +36,12 @@ const cards = [
     link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
     color: "#fd521a",
   },
+  {
+    title: "Borrowd",
+    description: "Platform to rent out your unused stuff or borrow what you need.",
+    link: "https://images.unsplash.com/photo-1625834384234-fd4eb7fe121f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    color:"#67AE6E",
+  }
 ];
 
 export default function StackingTextCards() {
@@ -109,7 +115,7 @@ const TextCard = ({
   const imageRotate = useTransform(scrollYProgress, [0, 0.5, 1], [0, 5, 0]);
 
   return (
-    <div ref={container} className="h-screen w-full sticky top-0 flex items-center justify-center font-mono">
+    <div ref={container} className="h-screen w-full sticky top-0 flex flex-col items-center justify-center font-mono">
       <motion.div
         style={{
           backgroundColor: color,

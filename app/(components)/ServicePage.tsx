@@ -1,5 +1,5 @@
 'use client';
-import Flow from "@/public/entrextflow.png";
+import Flow from "@/public/extrextPart.png";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -14,7 +14,7 @@ export function Service() {
 
   return (
     <div className="font-mono md:mt-56 mt-30 mb-28">
-      <div className="flex px-4 md:mb-32 justify-around flex-col md:flex-row gap-20">
+      <div className="flex px-4 md:mb-32 justify-around flex-col md:flex-row md:gap-20 gap-5">
         <motion.div
           ref={titleRef}
           initial={{ opacity: 0, y: 50 }}
@@ -30,14 +30,14 @@ export function Service() {
           initial={{ opacity: 0, y: 50 }}
           animate={isDescInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-2xl md:pl-10 w-full md:w-[700px]"
+          className="text-lg md:text-2xl md:pl-10 pl-3 w-full md:w-[700px] "
         >
           <p>
             We’re open to partnerships with visionary non-tech founders, content creators, and strong operators.  If you have a compelling idea, a talent for content, or skills in distribution, branding, or tech, let’s talk. We partner on a model that supports co-creation and leadership.
           </p>
         </motion.div>
       </div>
-      <div className="px-5 flex flex-col lg:flex-row justify-around gap-12 mt-10">
+      <div className="px-5 flex flex-col lg:flex-row justify-around gap-12 md:mt-10">
         <div className="w-full md:w-[40%] overflow-hidden flex items-start">
           <Image
             priority
@@ -111,10 +111,10 @@ function CreativeBtn() {
     <>
       <div className='group relative cursor-pointer p-2 md:w-32 w-24 border bg-white rounded-full overflow-hidden text-black text-center font-semibold md:text-xl mt-2'>
         <span className='translate-x-1 group-hover:translate-x-12 group-hover:opacity-0 transition-all duration-300 inline-block ml-3'>
-          About
+          Apply
         </span>
         <div className='flex gap-5 text-white z-10 items-center absolute top-0 h-full w-full justify-center translate-x-12 opacity-0 group-hover:-translate-x-1 group-hover:opacity-100 transition-all duration-300'>
-          <span>About</span>
+          <span>Apply</span>
           <ArrowRight />
         </div>
         <div className='absolute top-[40%] left-[20%] h-2 w-2 group-hover:h-full group-hover:w-full rounded-lg bg-black scale-[1] group-hover:bg-yellow-400 group-hover:scale-[1.8] transition-all duration-300 group-hover:top-[0%] group-hover:left-[0%] '></div>

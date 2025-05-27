@@ -3,7 +3,6 @@
 import { useState } from "react";
 import CurvedWords from "./(components)/CurvedWords";
 import FAQSection from "./(components)/FAQ";
-import Header from "./(components)/Header";
 import Hero from "./(components)/Hero";
 import { Service } from "./(components)/ServicePage";
 import StackingCards from "./(components)/StackingCard";
@@ -14,6 +13,9 @@ import useLenis from "@/hook/useLenis";
 import GoToPage from "./(components)/GoToPage";
 import GlobeDemo from "./(components)/(animations)/Gloabe";
 import { Footer } from "./(components)/Footer";
+import ServeTitle from "./(components)/ServerTitle";
+import CommingSoon from "./(components)/ComingSoon";
+import ProdcutOffers from "./(components)/ProductsOffers";
 
 export default function Home() {
   useLenis();
@@ -26,9 +28,13 @@ export default function Home() {
         <div>
           <div className="m-2">
             <Hero />
+            <ServeTitle/>
             <CurvedWords />
-            <SubHero />
+          </div>
+          <SubHero />
+          <div>
             <SubHeroInfo />
+            <ProdcutOffers/>
           </div>
 
           {/* <div className="">
@@ -41,6 +47,7 @@ export default function Home() {
 
           <div className="">
              <StackingCards />
+             <CommingSoon/>
           </div>
          
           <div className="m-2">

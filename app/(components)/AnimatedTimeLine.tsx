@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useScroll } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 interface TimelineEvent {
   id: string
@@ -72,15 +72,13 @@ const timelineEvents: TimelineEvent[] = [
 
 export default function AnimatedTimeline() {
   const containerRef = useRef<HTMLDivElement>(null)
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start center", "end center"],
   })
 
-
-  const timelineEventsLength = timelineEvents.length
-    //@ts-ignore
-  const lineHeight = scrollYProgress.current * 100 + "%"
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
 
   return (
     <div className="min-h-screen bg-gray-50 py-20">
@@ -92,61 +90,57 @@ export default function AnimatedTimeline() {
 
         <div ref={containerRef} className="relative">
           {/* Background line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full z-0" />
 
           {/* Animated red line */}
           <motion.div
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-red-500 origin-top"
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-red-500 origin-top z-10"
             style={{ height: lineHeight }}
           />
 
-          <div className="space-y-16">
+          <div className="space-y-16 z-20 relative">
             {timelineEvents.map((event, index) => {
               const isLeft = index % 2 === 0
-              const eventProgress =
-                //@ts-ignore
-                scrollYProgress.current >= index / timelineEventsLength &&
-                  //@ts-ignore
-                scrollYProgress.current <= (index + 1) / timelineEventsLength
-                  ? 1
-                  : 0
 
               return (
                 <motion.div
                   key={event.id}
-                  className={`flex items-center ${isLeft ? "flex-row" : "flex-row-reverse"}`}
+                  className={`
+                    flex flex-col md:flex-row 
+                    ${isLeft ? "md:flex-row" : "md:flex-row-reverse"} 
+                    items-center gap-8
+                  `}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: false, margin: "-100px" }}
                 >
-                  <div className={`w-5/12 ${isLeft ? "pr-8 text-right" : "pl-8 text-left"}`}>
+                  {/* Content */}
+                  <div className={`md:w-5/12 w-full ${isLeft ? "md:pr-8 text-right md:text-right" : "md:pl-8 text-left md:text-left"}`}>
                     <motion.div
-                      className={`p-6 rounded-lg shadow-lg ${
+                      className={`p-6 rounded-xl shadow-md transition-all ${
                         event.type === "start" || event.type === "end"
-                          ? "bg-gray-100 border-2 border-gray-300"
-                          : "bg-white border-2 border-gray-900"
+                          ? "bg-gray-100 border border-gray-300"
+                          : "bg-white border border-gray-800"
                       }`}
                       whileHover={{ scale: 1.02, y: -5 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
                       <h3
                         className={`text-xl font-bold mb-2 ${
-                          event.type === "start" || event.type === "end" ? "text-gray-600" : "text-gray-900"
+                          event.type === "start" || event.type === "end"
+                            ? "text-gray-600"
+                            : "text-gray-900"
                         }`}
                       >
                         {event.title}
                       </h3>
+                      <p className={`text-sm mb-3 text-gray-500`}>{event.date}</p>
                       <p
-                        className={`text-sm mb-3 ${
-                          event.type === "start" || event.type === "end" ? "text-gray-500" : "text-gray-700"
-                        }`}
-                      >
-                        {event.date}
-                      </p>
-                      <p
-                        className={`leading-relaxed text-lg ${
-                          event.type === "start" || event.type === "end" ? "text-gray-600" : "text-gray-800"
+                        className={`text-base leading-relaxed ${
+                          event.type === "start" || event.type === "end"
+                            ? "text-gray-600"
+                            : "text-gray-800"
                         }`}
                       >
                         {event.description}
@@ -154,6 +148,7 @@ export default function AnimatedTimeline() {
                     </motion.div>
                   </div>
 
+                  {/* Dot */}
                   <div className="relative z-10">
                     <motion.div
                       className={`w-6 h-6 rounded-full border-4 ${
@@ -161,24 +156,15 @@ export default function AnimatedTimeline() {
                           ? "bg-gray-400 border-gray-300"
                           : "bg-gray-900 border-gray-800"
                       }`}
-                      style={{
-                        scale: eventProgress === 1 ? 1.2 : 0.8,
-                        backgroundColor:
-                          eventProgress === 1
-                            ? "#EF4444"
-                            : event.type === "start" || event.type === "end"
-                              ? "#9CA3AF"
-                              : "#111827",
-                      }}
                       whileInView={{
                         scale: [0.8, 1.2, 1],
                         transition: { duration: 0.6, ease: "easeOut" },
                       }}
-                      viewport={{ once: false }}
                     />
                   </div>
 
-                  <div className="w-5/12" />
+                  {/* Spacer (keeps layout balance on md+) */}
+                  <div className="hidden md:block md:w-5/12" />
                 </motion.div>
               )
             })}

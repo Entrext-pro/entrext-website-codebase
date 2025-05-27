@@ -26,7 +26,7 @@ export default function Header() {
 
 
   return (
-    <div className="sticky top-0 px-10 z-50 py-5 bg-white">
+    <div className="sticky top-0 md:px-10 px-2 z-50 py-5 bg-white">
       <div className="flex justify-between items-center ">
         <motion.div
           initial={false}
@@ -46,10 +46,10 @@ export default function Header() {
         </motion.div>
 
 
-        <div className="md:flex gap-32 mr-10 hidden">
+        <div className="md:flex gap-32 mr-52 hidden">
           <Navigate text="Partnerships" onClick={()=> router.push("/partnerships")} />
-          <Navigate text="Products" />
-          <Navigate text="Culture" />
+          {/* <Navigate text="Products" />
+          <Navigate text="Culture" /> */}
           <Navigate text="Apply" onClick={() => setApplyModalOpen(true)} />
         </div>
 
@@ -70,7 +70,7 @@ export default function Header() {
             >
               <div className="flex justify-between items-center w-full">
                 <h4 className="md:w-16 w-4 font-[700] text-white md:text-3xl text-xl leading-[1] absolute top-5 left-5">
-                  Entrext Logo
+                  Entrext
                 </h4>
                 <button
                   onClick={() => setMenuOpen(false)}
@@ -80,9 +80,12 @@ export default function Header() {
                 </button>
               </div>
 
-              <NavigateMobile title="Partnerships" />
-              <NavigateMobile title="Products" />
-              <NavigateMobile title="Culture" />
+              <NavigateMobile title="Partnerships" onClick={() => {
+                  router.push("/partnerships")
+                  setMenuOpen(false)
+                }} />
+              {/* <NavigateMobile title="Products" />
+              <NavigateMobile title="Culture" /> */}
               <NavigateMobile title="Apply" onClick={() => {
                   setMenuOpen(false)
                   setApplyModalOpen(true)
@@ -111,7 +114,7 @@ function NavigateMobile({ title, onClick }: { title: string, onClick?: () => voi
   return (
     <div
       onClick={onClick}
-      className="text-4xl font-[1000] mr-7 hover:text-gray-400 transition active:text-gray-500 cursor-pointer"
+      className="text-4xl mt-5 font-[1000] mr-7 hover:text-gray-400 transition active:text-gray-500 cursor-pointer"
     >
       {title}
     </div>

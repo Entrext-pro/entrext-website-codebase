@@ -1,205 +1,208 @@
-import MoneyBag from "@/public/icons8-money-bag-50.png"
-import Rocket from "@/public/icons8-rocket-50.png"
 import Image from "next/image"
 
 export default function PartnershipPlans() {
     return (
-        <div className="mt-80">
+        <div className="mt-20 md:mt-80 px-4 md:px-0">
             <div className="w-full flex flex-col items-center justify-center">
-                <h3 className="text-7xl font-[600]">Partnership Plans</h3>
-                <p className="text-3xl mt-3">Equity-based partnerships to build your AI product with zero upfront cost.</p>
+                <h3 className="text-4xl md:text-7xl font-[600] text-center">Join the Entrext Builder Core</h3>
+                <p className="text-lg md:text-3xl mt-3 text-center max-w-4xl">Not just partners. Core team. Co-builders. Founders-in-the-making.</p>
             </div>
 
-            <div className="flex w-full items-center justify-center gap-20 mt-10">
-                <PlanComponent1 />
-                <PlanComponent2 />
+            <div className="flex flex-col items-center justify-center mt-8 md:mt-12 max-w-5xl mx-auto">
+                <div className="text-center space-y-4 md:space-y-6 text-lg md:text-2xl">
+                    <p>{"We don't do clients. We don't do freelancing."}</p>
+                    <p>{"We build real products — with people who bring real energy."}</p>
+                    <p>{"If you're someone with vision, distribution, storytelling, or technical firepower — you might belong on our internal team of builders."}</p>
+                    <p className="font-[500]">{"Each partnership below is not a transaction. It's a path into Entrext — a shared journey of building, shipping, and scaling."}</p>
+                </div>
+            </div>
+
+            <div className="flex flex-col w-full items-center justify-center gap-8 lg:gap-12 mt-12 md:mt-16">
+                <TrackComponent1 />
+                <TrackComponent2 />
+                <TrackComponent3 />
             </div>
         </div>
     )
 }
 
-function PlanComponent1() {
+function TrackComponent1() {
     return (
-        <div className="flex flex-col w-[750px] h-[1200px] font-mono border p-10">
-            <div className="flex flex-col gap-8">
-                <h3 className="text-orange-700 text-3xl">Non-Tech Founder Plan</h3>
-                <div className="flex gap-3">
-                    <h1 className="text-5xl font-[500]">30-40%</h1>
-                    <p className="flex items-end text-gray-700 text-2xl">Equity</p>
+        <div className="flex flex-col w-full max-w-[900px] font-mono border-2 border-slate-300 rounded-xl p-6 md:p-8 bg-gradient-to-br from-white to-gray-50">
+            <div className="flex flex-col gap-4 md:gap-6">
+                <div className="flex items-center gap-4">
+                    <span className="text-3xl md:text-4xl font-bold text-gray-400">(01)</span>
+                    <h3 className="text-orange-700 text-2xl md:text-3xl font-[600]">Non-Tech Founder Track</h3>
                 </div>
-                <p className="text-2xl">For non-tech founders who have a strong AI product idea but lack technical resources. We take 30-40% equity in exchange for full product development.</p>
+                <p className="text-xl md:text-2xl font-[500] text-gray-800">{"Have the vision. Lead the growth. We'll build the tech."}</p>
+                <p className="text-lg md:text-xl text-gray-600">{"You know the problem space. You have ideas. Maybe you've done sales, branding, or community — but you don't code, and you don't have a tech team. No worries. You bring the energy, we bring the engineering."}</p>
             </div>
 
-            <div className="flex flex-col gap-5 mt-4">
-                <h1 className="text-3xl font-[500]">What You Get:</h1>
+            <div className="flex flex-col gap-6 mt-8">
                 <div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Full-service MVP development (AI, software, backend, frontend)</p>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <div className="flex gap-2">
+                    <h4 className="text-2xl md:text-3xl font-[600] mb-4">{"What You Get:"}</h4>
+                    <div className="space-y-3">
+                        <div className="flex gap-3">
                             <TickSvg />
-                            <p className="text-xl font-[500]">Dedicated Team:</p>
+                            <p className="text-lg md:text-xl">{"Full product build (AI, software, backend, frontend)"}</p>
                         </div>
-                        <div className="ml-20 text-xl">
-                            <ul>
-                                <li>1 Lead Engineer (Full-Stack)</li>
-                                <li>1 UX/UI Designer</li>
-                                <li>1 QA Specialist</li>
-                            </ul>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"Assigned core tech team (Engineer, Designer, QA)"}</p>
                         </div>
-                    </div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Market research & strategy alignment</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Ongoing product optimization & scaling post-launch</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Long-term partnership to ensure the products success</p>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You focus on testing, feedback, and distribution"}</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">Long-term role as a co-builder with us</p>
+                        </div>
                     </div>
                 </div>
 
                 <div>
-                    <div className="flex gap-3">
-                        <Image
-                            src={MoneyBag}
-                            alt="Money Bag"
-                            className="size-7"
-                        />
-                        <p className="text-3xl font-[500]">Equity Split:</p>
-                    </div>
-                    <div className="ml-20">
-                        <ul className="gap-2 flex flex-col text-xl">
-                            <li>30-40% equity retained by us for development & ongoing support</li>
-                            <li>If any fixed costs arise (e.g., API usage, cloud costs, or external tools), you cover them</li>
-                            <li>If you are raising funds, we must be informed to align strategies</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div className="flex gap-3 mt-5">
-                            <Image
-                                src={Rocket}
-                                alt="Money Bag"
-                                className="size-7"
-                            />
-                            <h1 className="text-3xl font-[500]">Perfect For:</h1>
+                    <h4 className="text-2xl md:text-3xl font-[600] mb-4">{"You're a Fit If:"}</h4>
+                    <div className="space-y-3">
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You've always wanted to build, but lacked a dev team"}</p>
                         </div>
-                        <div className="ml-20">
-                            <ul className="flex flex-col gap-2 text-xl">
-                                <li>Non-tech founders with a scalable AI product vision</li>
-                                <li>Those looking for a long-term partnership with expert AI developers</li>
-                            </ul>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You're confident in your ability to grow or sell"}</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You want to build your next chapter with a team that moves"}</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="w-full">
-                    <button className="bg-slate-300 w-full p-3 text-2xl rounded-2xl cursor-pointer hover:bg-slate-400">Book a Call</button>
+                <div className="w-full mt-6">
+                    <button className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Non-Tech Track</button>
                 </div>
             </div>
         </div>
     )
 }
 
-function PlanComponent2() {
+function TrackComponent2() {
     return (
-        <div className="flex flex-col w-[750px] h-[1200px] font-mono border p-10">
-            <div className="flex flex-col gap-3">
-                <h3 className="text-orange-700 text-3xl">Content Creator Plan</h3>
-                <div className="flex gap-3">
-                    <h1 className="text-5xl font-[500]">20%</h1>
-                    <p className="flex items-end text-gray-700 text-2xl">Equity</p>
+        <div className="flex flex-col w-full max-w-[900px] font-mono border-2 border-slate-300 rounded-xl p-6 md:p-8 bg-gradient-to-br from-white to-gray-50">
+            <div className="flex flex-col gap-4 md:gap-6">
+                <div className="flex items-center gap-4">
+                    <span className="text-3xl md:text-4xl font-bold text-gray-400">(02)</span>
+                    <h3 className="text-orange-700 text-2xl md:text-3xl font-[600]">Content Creator Track</h3>
                 </div>
-                <p className="text-2xl">For content creators who want to be the face of an AI product, using their brand, audience, or marketing expertise to scale it.</p>
+                <p className="text-xl md:text-2xl font-[500] text-gray-800">Be the face. Own the story. Help grow something that fits your vibe.</p>
+                <p className="text-lg md:text-xl text-gray-600">{"You're a creator. You know what resonates. You've built an audience — or know how to. We're looking for people like you to co-own and grow products that actually solve problems."}</p>
             </div>
 
-            <div className="flex flex-col gap-5 mt-4">
-                <h1 className="text-3xl font-[500]">What You Get:</h1>
+            <div className="flex flex-col gap-6 mt-8">
                 <div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">20% ownership in the AI product until exit</p>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <div className="flex gap-2">
+                    <h4 className="text-2xl md:text-3xl font-[600] mb-4">What You Get:</h4>
+                    <div className="space-y-3">
+                        <div className="flex gap-3">
                             <TickSvg />
-                            <p className="text-xl font-[500]">A fully built AI product</p>
+                            <p className="text-lg md:text-xl">A fully built AI product you can stand behind</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">Support from our design and launch team</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">A seat at the table as a core growth partner</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">Flexible terms shaped around how you want to grow</p>
                         </div>
                     </div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Strategic positioning as the face of the brand</p>
+                </div>
+
+                <div>
+                    <h4 className="text-2xl md:text-3xl font-[600] mb-4">{"You're a Fit If:"}</h4>
+                    <div className="space-y-3">
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You're a content machine with real reach"}</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You've always wanted to be part of something you own"}</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You're done promoting other people's stuff — ready to build your own"}</p>
+                        </div>
                     </div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Marketing & launch support from our team</p>
-                    </div>
-                    <div className="flex gap-2">
-                        <TickSvg />
-                        <p className="text-xl font-[500]">Long-term revenue potential from product growth</p>
+                </div>
+
+                <div className="w-full mt-6">
+                    <button className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Creator Track</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function TrackComponent3() {
+    return (
+        <div className="flex flex-col w-full max-w-[900px] font-mono border-2 border-slate-300 rounded-xl p-6 md:p-8 bg-gradient-to-br from-white to-gray-50">
+            <div className="flex flex-col gap-4 md:gap-6">
+                <div className="flex items-center gap-4">
+                    <span className="text-3xl md:text-4xl font-bold text-gray-400">(03)</span>
+                    <h3 className="text-orange-700 text-2xl md:text-3xl font-[600]">Tech Builder Track</h3>
+                </div>
+                <p className="text-xl md:text-2xl font-[500] text-gray-800">{"You're technical. You ship fast. You're ready to co-lead."}</p>
+                <p className="text-lg md:text-xl text-gray-600">{"You build. Maybe you've freelanced, maybe you've led teams. Either way — you're ready to stop working for products and start building with the right crew. Join us as a core builder, and help shape what we launch next."}</p>
+            </div>
+
+            <div className="flex flex-col gap-6 mt-8">
+                <div>
+                    <h4 className="text-2xl md:text-3xl font-[600] mb-4">What You Get:</h4>
+                    <div className="space-y-3">
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">A say in what we build and how</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">Full creative control within product tracks</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">Design, research, and community support from our side</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">A seat in the Entrext builder core</p>
+                        </div>
                     </div>
                 </div>
 
                 <div>
-                    <div className="flex gap-3 mt-5">
-                        <Image
-                            src={Rocket}
-                            alt="Money Bag"
-                            className="size-7"
-                        />
-                        <h1 className="text-3xl font-[500]">Your Role:</h1>
-                    </div>
-                    <div className="ml-20">
-                        <ul className="flex flex-col gap-2 text-xl">
-                            <li>Promote and market the AI product to your audience</li>
-                            <li>Drive user adoption through content and community-building</li>
-                            <li>Partner with us in scaling the product for long-term success</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div className="flex gap-3">
-                        <Image
-                            src={MoneyBag}
-                            alt="Money Bag"
-                            className="size-7"
-                        />
-                        <p className="text-3xl font-[500]">Equity Split:</p>
-                    </div>
-                    <div className="ml-20">
-                        <ul className="gap-2 flex flex-col text-xl">
-                            <li>20% for content creators</li>
-                            <li>We manage product development, tech infrastructure, and scaling</li>
-                        </ul>
+                    <h4 className="text-2xl md:text-3xl font-[600] mb-4">{"You're a Fit If:"}</h4>
+                    <div className="space-y-3">
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You're an engineer, product builder, or technical founder-type"}</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You've got ideas — or just want to co-own something that matters"}</p>
+                        </div>
+                        <div className="flex gap-3">
+                            <TickSvg />
+                            <p className="text-lg md:text-xl">{"You're looking for more than a gig — you're looking for your people"}</p>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <div className="flex gap-3 mt-5">
-                        <Image
-                            src={Rocket}
-                            alt="Money Bag"
-                            className="size-7"
-                        />
-                        <h1 className="text-3xl font-[500]">Perfect for:</h1>
-                    </div>
-                    <div className="ml-20">
-                        <ul className="flex flex-col gap-2 text-xl">
-                            <li>Influencers, creators, and personal brands who want equity in an AI product</li>
-                            <li>Anyone looking to co-own and promote an AI-driven startup</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="w-full">
-                    <button className="bg-slate-300 w-full p-3 text-2xl rounded-2xl cursor-pointer hover:bg-slate-400">Book a Call</button>
+                <div className="w-full mt-6">
+                    <button className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Tech Track</button>
                 </div>
             </div>
         </div>
@@ -208,8 +211,8 @@ function PlanComponent2() {
 
 function TickSvg() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" className="mt-2" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30">
-            <path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" className="mt-1 flex-shrink-0" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30">
+            <path fill="#ea580c" d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"></path>
         </svg>
     )
 }
