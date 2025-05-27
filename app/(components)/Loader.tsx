@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Home from "./(animations)/Gloabe";
 import { RetroGridDemo } from "./RetroGridDemo";
+import CurvedTextLine from "./CurvedWords";
 
 export default function LoaderLogic({ onComplete }: { onComplete: () => void }) {
   const [done, setDone] = useState(false);
@@ -91,6 +92,7 @@ export default function LoaderLogic({ onComplete }: { onComplete: () => void }) 
           <div className="absolute opacity-0 pointer-events-none inset-0">
             <Home />
             <RetroGridDemo/>
+            <CurvedTextLine/>
           </div>
         </motion.div>
       )}

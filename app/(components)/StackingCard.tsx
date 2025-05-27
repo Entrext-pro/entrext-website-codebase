@@ -3,6 +3,7 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 const cards = [
   {
@@ -47,6 +48,9 @@ export default function StackingTextCards() {
   return (
     <ReactLenis root>
       <main ref={container} className="relative">
+        <div className="w-full md:text-8xl text-4xl font-[700] flex justify-center">
+          <AuroraText>Products in Makings</AuroraText>
+        </div>
         <section className="w-full text-white">
           {cards.map((card, i) => {
             const targetScale = 1 - (cards.length - i) * 0.05;
@@ -102,14 +106,14 @@ const TextCard = ({
   const imageRotate = useTransform(scrollYProgress, [0, 0.5, 1], [0, 5, 0]);
 
   return (
-    <div ref={container} className="h-screen mt-20 w-full sticky top-0 flex items-center justify-center font-mono">
+    <div ref={container} className="h-screen w-full sticky top-0 flex items-center justify-center font-mono">
       <motion.div
         style={{
           backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="relative -top-[25%] md:h-[90vh] h-[600px] max-h-[800px] w-[95%] md:w-full rounded-2xl border-2 border-white overflow-hidden"
+        className="relative -top-[25%] md:h-[90vh] h-[600px] max-h-[800px] w-[90%] md:w-[90%] rounded-2xl border-2 border-white overflow-hidden"
       >
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] rounded-2xl pointer-events-none z-0" />
 

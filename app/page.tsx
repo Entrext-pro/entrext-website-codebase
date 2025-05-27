@@ -36,9 +36,9 @@ export default function Home() {
              <ScrollTextBlur />
           </div> */}
           
-          <div className={`relative overflow-hidden w-full h-[500px] lg:h-[800px] md:my-24 mb-36 `}>
+          <div className={`relative overflow-hidden w-full h-[500px] lg:h-[800px] md:my-72 mb-44 `}>
                 <GlobeDemo/>
-            </div>
+          </div>
 
           <div className="">
              <StackingCards />

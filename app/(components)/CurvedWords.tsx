@@ -1,53 +1,78 @@
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/magicui/marquee";
+
 export default function CurvedTextLine() {
     return (
-        <div className="w-full flex justify-center md:my-72 mt-30 ">
-            <div className="block sm:hidden">
-                <CurvedTextLineMobile />
-            </div>
-            <div className="hidden sm:block w-full">
-                <CurvedTextLineDesktop />
+        <div className="w-full flex justify-center md:my-72 my-30">
+            <div className="w-full">
+                <MarqueeDemo/>
             </div>
         </div>
     );
 }
 
-function CurvedTextLineDesktop() {
-    return (
-        <svg viewBox="0 0 1600 250" className="w-full h-[200px]" preserveAspectRatio="none">
-            <path
-                id="curvePathDesktop"
-                d="M 0 150 
-                   Q 200 70, 400 150 
-                   Q 600 250, 800 150 
-                   Q 1000 50, 1200 150 
-                   Q 1400 250, 1600 150"
-                fill="transparent"
-                stroke="transparent"
-            />
-            <text fontSize="50" fill="#000">
-                <textPath href="#curvePathDesktop" startOffset="0%">
-                    founders individuals niche customer B2B org student founders individuals niche customer B2B org student founders individuals niche customer B2B org student
-                </textPath>
-            </text>
-        </svg>
-    );
+const words = [
+  "founders",
+  "individuals",
+  "niche",
+  "customer",
+  "B2B",
+  "org",
+  "student",
+  "founders",
+  "individuals",
+  "niche",
+  "customer",
+  "B2B",
+  "org",
+  "student",
+  "founders",
+  "individuals",
+  "niche",
+  "customer",
+  "B2B",
+  "org",
+  "student"
+];
+
+
+const firstRow = words.slice(0, words.length);
+
+const ReviewCard = ({
+  name
+}: {
+  name: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full md:w-64 w-32 cursor-pointer overflow-hidden rounded-xl border md:p-4 p-2",
+        "bg-slate-100 ",
+      )}
+    >
+      <div className="flex justify-center capitalize ">
+        <div className="text-center">
+          <figcaption className="md:text-3xl text-lg font-medium">
+            {name}
+          </figcaption>
+        </div>
+    </div>
+    </figure>
+  );
+};
+
+export function MarqueeDemo() {
+  return (
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((review,index) => (
+          <ReviewCard name={review} key={index} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+    </div>
+  );
 }
 
-function CurvedTextLineMobile() {
-    return (
-        <svg viewBox="0 0 700 150" className="w-full h-[150px] font-mono" preserveAspectRatio="none">
-            <path
-                id="curvePathMobileUp"
-                d="M 0 120 Q 200 50, 350 50 T 700 120"
-                fill="transparent"
-                stroke="transparent"
-            />
-            <text fontSize="28" fill="#000">
-                <textPath href="#curvePathMobileUp">
-                    founders fresher org student customer B2B org student founders B2B org student fresher niche
-                </textPath>
-            </text>
-        </svg>
-    );
-}
 

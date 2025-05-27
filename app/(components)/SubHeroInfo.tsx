@@ -13,8 +13,8 @@ export default function SubHeroInfo() {
             opacity: 0,
             y: 10,
             transition: {
-                delay: i * 0.02,
-                duration: 0.3,
+                delay: i * 0.01,
+                duration: 0.05,
                 ease: 'easeIn',
             },
         }),
@@ -22,7 +22,7 @@ export default function SubHeroInfo() {
             opacity: 1,
             y: 0,
             transition: {
-                delay: i * 0.05,
+                delay: i * 0.01,
                 duration: 0.5,
                 ease: 'easeOut',
             },
@@ -75,7 +75,7 @@ export default function SubHeroInfo() {
     };
 
     return (
-        <div className="mt-15 flex md:flex-row-reverse flex-col-reverse md:justify-between md:px-28 md:mb-44 mb-20" ref={ref}>
+        <div className="mt-15 flex md:flex-row-reverse flex-col-reverse md:justify-between md:px-28 md:mb-64 mb-20" ref={ref}>
             <div className="md:w-[800px] lg:w-[1000px] w-full font-mono md:text-2xl font-[500] space-y-5">
                 {renderAnimatedText(fullText)}
             </div>

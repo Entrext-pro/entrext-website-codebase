@@ -3,6 +3,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { Merienda, Delicious_Handrawn } from "next/font/google"
+import { MarqueeDemo } from "./CurvedWords";
 
 
 const merienda = Merienda({
@@ -67,8 +68,8 @@ export default function SubHero() {
                 </motion.div>
             </div>
 
-            <div className="block sm:hidden">
-                <CurvedTextReverseLineMobile />
+            <div className="block sm:hidden mt-20 mb-40">
+                <MarqueeDemo />
             </div>
 
             <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 my-20   ${merienda.className}`}>
@@ -159,20 +160,4 @@ const fadeFromLeft = {
     visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
 };
 
-function CurvedTextReverseLineMobile() {
-    return (
-        <svg viewBox="0 0 700 150" className="w-full h-[150px]" preserveAspectRatio="none">
-            <path
-                id="curvePathMobile"
-                d="M 0 70 Q 200 140, 350 140 T 700 60"
-                fill="transparent"
-                stroke="transparent"
-            />
-            <text fontSize="28" fill="#000">
-                <textPath href="#curvePathMobile">
-                    founders fresher org student customer B2B org student founders B2B org student fresher niche
-                </textPath>
-            </text>
-        </svg>
-    );
-}
+
