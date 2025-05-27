@@ -41,7 +41,7 @@ export default function Header() {
         </motion.div>
 
 
-        <div className="md:flex gap-28 mr-10 hidden">
+        <div className="md:flex gap-32 mr-10 hidden">
           <Navigate text="Partnerships" />
           <Navigate text="Products" />
           <Navigate text="Culture" />

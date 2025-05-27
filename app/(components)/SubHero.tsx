@@ -51,7 +51,7 @@ export default function SubHero() {
                 </motion.div>
             </div>
 
-            <div className="overflow-hidden md:mb-96 mb-3">
+            <div className="overflow-hidden md:mb-52 mb-3">
                 <motion.div
                     className="flex justify-between mt-2"
                     initial="hidden"
@@ -68,11 +68,11 @@ export default function SubHero() {
                 </motion.div>
             </div>
 
-            <div className="block sm:hidden mt-20 mb-40">
+            <div className="md:mt-0 mt-20 md:mb-96 mb-40">
                 <MarqueeDemo />
             </div>
 
-            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 my-20   ${merienda.className}`}>
+            <div className={`text-center flex [transform:scale(1.4,1.2)] justify-center md:my-36 my-20  font-mono`}>
                 <AnimatedColoredText text="Entrext" />
             </div>
         </div>
@@ -100,7 +100,8 @@ function AnimatedColoredText({ text }: { text: string }) {
             3: base,
             4: base,
             5: base,
-            6: base,
+            6: base,          // Mark these word indices as bold
+
         },
         {
             0: base,
@@ -139,7 +140,7 @@ function AnimatedColoredText({ text }: { text: string }) {
                     key={i}
                     animate={{ color: stages[stage][i] ?? base }}
                     transition={{ duration: 1 }}
-                    className="font-extrabold leading-none md:text-[20vw] text-[19vw]"
+                    className="font-extrabold leading-none md:text-[18vw] text-[17vw]"
                     
                 >
                     {char}

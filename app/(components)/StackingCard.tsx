@@ -1,7 +1,7 @@
 "use client";
 import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll, type MotionValue } from "framer-motion";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import Image from "next/image";
 import { AuroraText } from "@/components/magicui/aurora-text";
 
@@ -55,7 +55,7 @@ export default function StackingTextCards() {
           {cards.map((card, i) => {
             const targetScale = 1 - (cards.length - i) * 0.05;
             return (
-              <TextCard
+              <MemoizedTextCard
                 key={i}
                 i={i}
                 title={card.title}
@@ -101,7 +101,10 @@ const TextCard = ({
     offset: ["start end", "start start"],
   });
 
-  const scale = useTransform(progress, range, [1, targetScale]);
+  const scale = useTransform(progress, range, [1, targetScale], {
+  clamp: true,
+  ease: (t) => Math.round(t * 100) / 100, 
+});
   const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 1]);
   const imageRotate = useTransform(scrollYProgress, [0, 0.5, 1], [0, 5, 0]);
 
@@ -112,6 +115,7 @@ const TextCard = ({
           backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
+          willChange:"transform",
         }}
         className="relative -top-[25%] md:h-[90vh] h-[600px] max-h-[800px] w-[90%] md:w-[90%] rounded-2xl border-2 border-white overflow-hidden"
       >
@@ -124,9 +128,17 @@ const TextCard = ({
               style={{
                 scale: imageScale,
                 rotate: imageRotate,
+                willChange:"transform"
               }}
             >
-              <Image src={link || "/placeholder.svg"} alt={title} fill className="object-cover" />
+              <Image 
+              src={link || "/placeholder.svg"} 
+              alt={title} 
+              fill 
+              className="object-cover" 
+              placeholder="blur"
+              blurDataURL="/placeholder.svg"
+              />
             </motion.div>
           </div>
 
@@ -153,3 +165,5 @@ const TextCard = ({
     </div>
   );
 };
+
+const MemoizedTextCard = memo(TextCard);
