@@ -23,7 +23,7 @@ const ApplyModal: React.FC<{ open: boolean; setOpen: (open: boolean) => void }> 
                             className="relative w-full p-3 border-2 border-black text-xl rounded-md overflow-hidden z-10 group transition-colors duration-500"
                         >
                             <span className="relative z-20 transition-colors duration-500 group-hover:text-white">
-                                Partnership
+                                Join Entrext
                             </span>
                             <span
                                 className="absolute inset-0 w-0 bg-black/85 z-10 transition-all duration-500 ease-in-out group-hover:w-full"
