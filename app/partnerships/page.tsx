@@ -15,10 +15,10 @@ export default function Partnerships() {
 
                 <div className="flex flex-col items-center text-center space-y-2 mb-8">
                     <div className="text-lg sm:text-xl font-semibold">
-                        Partnership Model
+                        Entrext Core Team Formation Model
                     </div>
                     <div className="text-base sm:text-lg max-w-xl">
-                        AI Product Development Model (For Non-Tech Founders & Content Creators)
+                        {"It’s about joining early, co-owning, and co-creating products that matter."}
                     </div>
                 </div>
             </div>
@@ -60,16 +60,16 @@ export default function Partnerships() {
 function FocusCardsDemo() {
   const cards = [
     {
-      title: "Partnership with Non-Tech Founders",
-      description: "If you have a clear idea or problem to solve, and you bring strengths in sales, branding, or distribution — but don't have a tech team — pitch us. We might just build the product with you and co-create something valuable.",
+      title: "Non-Tech Founders",
+      description: "You have a clear idea or a sharp problem insight, and you're strong in sales, distribution, or brand but lack a tech team. We’ll co-build the product with you, and you’ll shape it as a core team founder from day one.",
     },
     {
-      title: "Partnership with Content Creators", 
-      description: "If you're great at storytelling, know how to connect with people, and want to be the face or voice of a product that fits your audience — reach out. You might find the perfect product to grow with.",
+      title: "Content Creators / Storytellers", 
+      description: "You’re a natural communicator with a loyal audience and a feel for what resonates. If you're ready to be the face or voice of a product or co-create one around your community , we’ll build it with you, not for you.",
     },
     {
-      title: "Partnership with Tech Builders",
-      description: "If you're strong in development, product thinking, or engineering and want to co-lead something meaningful — we'd love to connect. We're always looking for builders ready to lead the next wave.",
+      title: "Technical Builders / Product Leaders",
+      description: "You think in systems, ship fast, and want to lead. If you’re an engineer, designer, or product mind looking to co-create meaningful tech at the founding stage, this is your lane.",
     }
   ];
 
@@ -121,19 +121,19 @@ const FAQContent = [
         id: 3,
         title: "What kind of products do you build through partnerships?",
         Description:
-            "Mostly AI-driven tools and platforms that solve real problems. Some examples:\n\n- AI-based productivity tools\n- Smart automation or assistants\n- Niche SaaS platforms\n- AI tools for creators, educators, or businesses\n- Community-powered tools or marketplaces\n\nIf the idea is clear, useful, and exciting — we’re interested.",
+            "Mostly AI-driven tools and platforms that solve real problems. Some examples:\n\n- AI-based productivity tools\n- Smart automation or assistants\n- Niche SaaS platforms\n- AI tools for creators, educators, or businesses\n- Community-powered tools or marketplaces\n\nIf the idea is clear, useful, and exciting, we’re interested.",
     },
     {
         id: 4,
         title: "How does the partnership work in practice?",
         Description:
-            "You bring your vision, energy, or distribution skills — we bring product strategy, design, and development. We stay closely involved throughout. Everything is flexible and shaped by conversations. There’s no one-size-fits-all model — we build it together.",
+            "You bring your vision, energy, or distribution skills, we bring product strategy, design, and development. We stay closely involved throughout. Everything is flexible and shaped by conversations. There’s no one-size-fits-all model — we build it together.",
     },
     {
         id: 5,
         title: "What’s the difference between partnering as a non-tech founder, creator, or tech builder?",
         Description:
-            "- **Non-tech founders** often lead the vision and go-to-market while we build the product with them.\n\n- **Content creators** usually help shape and grow a product that aligns with their audience.\n\n- **Tech builders** may take the lead on product creation and co-own delivery and vision.\n\nEvery role is different — but in all cases, we look for leadership qualities.",
+            "- **Non-tech founders** often lead the vision and go-to-market while we build the product with them.\n\n- **Content creators** usually help shape and grow a product that aligns with their audience.\n\n- **Tech builders** may take the lead on product creation and co-own delivery and vision.\n\nEvery role is different, but in all cases, we look for leadership qualities.",
     },
     {
         id: 6,
@@ -163,7 +163,7 @@ const FAQContent = [
         id: 10,
         title: "What if the product doesn’t take off?",
         Description:
-            "Not every product works right away — and that’s okay. We believe in trying, learning, and adapting. If it doesn’t work, we explore tweaks, pivots, or sometimes even completely new ideas together. We’re not here to “ship and forget.” We’re in this to build things that last.",
+            "Not every product works right away and that’s okay. We believe in trying, learning, and adapting. If it doesn’t work, we explore tweaks, pivots, or sometimes even completely new ideas together. We’re not here to “ship and forget.” We’re in this to build things that last.",
     },
 ];
 

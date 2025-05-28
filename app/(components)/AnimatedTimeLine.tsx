@@ -16,15 +16,14 @@ const timelineEvents: TimelineEvent[] = [
     id: "1",
     title: "Step 1: Application Submission",
     description:
-      "Submit an application detailing your AI product idea (if applicable), your audience, niche, or marketing potential (for content creators), and how you see your role in the project's growth. Key Questions: What problem does this AI product solve? Who is the target market? Are you looking to contribute as a founder (product idea) or as a content creator?",
+      "Submit an application detailing your AI product idea (if applicable), your audience, niche, or technical background and how you see your role in the product’s growth Key Questions: What problem does this AI product solve? Who is the target market? Are you applying as a Non-Tech Founder, Content Creator, or Tech Builder?",
     date: "Initial Phase",
     type: "start",
   },
   {
     id: "2",
     title: "Step 2: Discovery Call",
-    description:
-      "We conduct an in-depth call to evaluate the partnership. For Product Owners: Understanding your vision, commitment, and market fit. For Content Creators: Assessing your audience reach, branding potential, and content expertise. Focus Areas: Your role in shaping the product and its marketing, and alignment between our technical expertise and your strategic input.",
+    description:"We conduct an in-depth call to evaluate your role in the team and your alignment with the product vision. For Non-Tech Founders: Understanding your idea, vision, and market understanding For Content Creators: Assessing your audience reach, positioning potential, and storytelling skills For Tech Builders: Exploring your experience, build capabilities, and product instincts Focus Areas: The role you’ll play in shaping, growing, and launching the product — and how your strengths align with the rest of the team.",
     date: "Evaluation Phase",
     type: "middle",
   },
@@ -32,39 +31,35 @@ const timelineEvents: TimelineEvent[] = [
     id: "3",
     title: "Step 3: Evaluation & Selection",
     description:
-      "Our team assesses the opportunity based on: Product Ideas: Scalability, feasibility, and alignment with our expertise. Content Creators: Audience size, engagement, and ability to drive user adoption. Acceptance Criteria: We select a limited number of partners per year based on strategic alignment and potential impact.",
+      "We assess opportunities based on role and contribution: For Non-Tech Founders: Idea strength, market fit, and leadership potential For Content Creators: Audience engagement, niche fit, and growth potential For Tech Builders: Technical skill, product vision, and shipping ability Selection Criteria: We select a limited number of core team members based on strategic fit, impact potential, and shared vision.",
     date: "Selection Phase",
     type: "middle",
   },
   {
     id: "4",
-    title: "Step 4: Partnership Agreement",
-    description:
-      "Once selected, we formalize the partnership with an equity-based agreement. For Product Owners: We own 30-40% of the product, and you retain the majority stake while we build and launch it. For Content Creators: You receive 20% equity, contributing through brand positioning, marketing, and audience growth. Equity is held until exit, meaning you benefit from long-term product growth and a future sale or acquisition.",
-    date: "Agreement Phase",
+    title: "Step 4: Core Team Formation",
+    description:"Once selected, we define your role as a core team contributor. Non-Tech Founders: You lead product direction, market validation, and user feedback loops Content Creators: You drive brand voice, audience growth, and content-led traction Tech Builders: You lead product development, prototyping, and iterative delivery",
+    date: "Alignment Phase",
     type: "middle",
   },
   {
     id: "5",
     title: "Step 5: Development Process Begins",
-    description:
-      "We assemble a team of AI engineers, designers, and project managers to bring the product to life. For Product Owners: Active involvement in feature development, user testing, and feedback. For Content Creators: Creating content, building an audience, and positioning the product in the market. Ongoing Communication: Weekly or bi-weekly check-ins for alignment and updates.",
-    date: "Development Phase",
+    description:"We assemble a dedicated team of AI engineers, designers, and product leads. Non-Tech Founders: Work closely with the team on feature prioritization, user testing, and feedback Content Creators: Create compelling narratives, build audience, and position the product Tech Builders: Architect, build, and ship core product features Ongoing Communication: Weekly or bi-weekly check-ins for alignment and velocity.",
+    date: "Build Phase",
     type: "middle",
   },
   {
     id: "6",
     title: "Step 6: MVP Launch & Market Testing",
-    description:
-      "Once the MVP is ready: Launch Support: Early user acquisition, testing, and refinement. Marketing & Growth: Leveraging content creators' platforms for visibility. Focus Areas: Collecting user feedback and optimizing the product, and content-driven marketing strategies for scaling.",
+    description:"Launch Support: Drive early users, test key assumptions, refine based on insights Marketing & Growth: Leverage creator-driven channels and organic strategies Focus Areas: Feedback loops, early traction, and marketing experiments for scale",
     date: "Launch Phase",
     type: "middle",
   },
   {
     id: "7",
     title: "Step 7: Long-Term Partnership & Exit",
-    description:
-      "We continue working together post-launch for: Iterative Improvements: Adapting based on market trends and user needs. Scaling & Growth Strategies: Expanding the product reach and revenue streams. Exit Planning: When a viable acquisition opportunity arises, we secure an exit that benefits all partners.",
+    description:"Post-launch, the team continues to build, grow, and scale the product together: Iterative Improvements: Shape the roadmap through user insights and market changes Growth Strategy: Expand reach, monetize, and explore new markets Outcome-Oriented: Stay aligned on long-term impact, sustainability, and optional exit opportunities",
     date: "Growth & Exit Phase",
     type: "end",
   },
@@ -84,7 +79,7 @@ export default function AnimatedTimeline() {
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Partnership Process</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Joining Entrext Process</h1>
           <p className="text-lg text-gray-600">Your journey from application to successful partnership</p>
         </div>
 

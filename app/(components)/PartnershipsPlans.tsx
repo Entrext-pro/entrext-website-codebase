@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function PartnershipPlans() {
     return (
@@ -27,6 +28,7 @@ export default function PartnershipPlans() {
 }
 
 function TrackComponent1() {
+    const router = useRouter()
     return (
         <div className="flex flex-col w-full max-w-[900px] font-mono border-2 border-slate-300 rounded-xl p-6 md:p-8 bg-gradient-to-br from-white to-gray-50">
             <div className="flex flex-col gap-4 md:gap-6">
@@ -80,7 +82,11 @@ function TrackComponent1() {
                 </div>
 
                 <div className="w-full mt-6">
-                    <button className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Non-Tech Track</button>
+                    <button
+                        onClick={() => {
+                            router.push("https://deformity.ai/d/C-P5znqtG_ZZ")
+                        }}
+                        className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Non-Tech Track</button>
                 </div>
             </div>
         </div>
@@ -88,6 +94,7 @@ function TrackComponent1() {
 }
 
 function TrackComponent2() {
+    const router = useRouter()
     return (
         <div className="flex flex-col w-full max-w-[900px] font-mono border-2 border-slate-300 rounded-xl p-6 md:p-8 bg-gradient-to-br from-white to-gray-50">
             <div className="flex flex-col gap-4 md:gap-6">
@@ -141,7 +148,11 @@ function TrackComponent2() {
                 </div>
 
                 <div className="w-full mt-6">
-                    <button className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Creator Track</button>
+                    <button
+                        onClick={() => {
+                            router.push("https://deformity.ai/d/C-P5znqtG_ZZ")
+                        }}
+                        className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Creator Track</button>
                 </div>
             </div>
         </div>
@@ -149,6 +160,7 @@ function TrackComponent2() {
 }
 
 function TrackComponent3() {
+    const router = useRouter()
     return (
         <div className="flex flex-col w-full max-w-[900px] font-mono border-2 border-slate-300 rounded-xl p-6 md:p-8 bg-gradient-to-br from-white to-gray-50">
             <div className="flex flex-col gap-4 md:gap-6">
@@ -202,7 +214,11 @@ function TrackComponent3() {
                 </div>
 
                 <div className="w-full mt-6">
-                    <button className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Tech Track</button>
+                    <button
+                        onClick={() => {
+                            router.push("https://deformity.ai/d/C-P5znqtG_ZZ")
+                        }}
+                        className="bg-orange-600 hover:bg-orange-700 text-white w-full p-4 text-xl md:text-2xl rounded-xl font-[500] transition-colors">Apply for Tech Track</button>
                 </div>
             </div>
         </div>

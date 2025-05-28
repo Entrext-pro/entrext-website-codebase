@@ -115,3 +115,60 @@ export function MarqueeDemo2() {
   );
 }
 
+const texts = [
+    "Extrext",
+    "Extrext",
+    "Extrext",
+    "Extrext",
+    "Extrext",
+]
+
+const ReviewCard2 = ({
+  name
+}: {
+  name: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full md:w-64 w-32 cursor-pointer overflow-hidden rounded-xl border md:p-4 p-2"
+      )}
+    >
+      <div className="flex justify-center capitalize ">
+        <div className="text-center">
+          <figcaption className="md:text-3xl text-lg font-medium">
+            {name}
+          </figcaption>
+        </div>
+    </div>
+    </figure>
+  );
+};
+
+export function MarqueeDemo3() {
+  return (
+    <div className="relative flex w-[1500px] bg-black text-white flex-col items-center justify-center overflow-hidden">
+      <Marquee  className="[--duration:20s]">
+        {texts.map((review,index) => (
+          <ReviewCard2 name={review} key={index} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+    </div>
+  );
+}
+
+export function MarqueeDemo4() {
+  return (
+    <div className="relative flex w-[1500px] bg-black text-white flex-col items-center justify-center overflow-hidden">
+      <Marquee reverse className="[--duration:20s] ">
+        {texts.map((review,index) => (
+          <ReviewCard2 name={review} key={index} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+    </div>
+  );
+}

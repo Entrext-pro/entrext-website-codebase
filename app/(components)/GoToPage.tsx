@@ -9,7 +9,7 @@ export default function GoToPage(){
             <Image
                 src={curlyArrow}
                 alt="Arrow"
-                className="absolute top-20 left-[38%] rotate-90"
+                className="absolute top-20 md:left-[40%] left-[38%] rotate-90"
             />
              <ShinyButtonDemo/>
         </div>
@@ -22,6 +22,6 @@ export function ShinyButtonDemo() {
     const router = useRouter();
   return <ShinyButton className="px-10 py-4" onClick={()=>{
     router.push("/partnerships")
-  }}>Go to Partnerships</ShinyButton>;
+  }}>Join the Entrext</ShinyButton>;
 }
 

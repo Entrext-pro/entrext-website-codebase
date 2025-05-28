@@ -8,6 +8,15 @@ export default function SubHeroInfo() {
   const isInView = useInView(ref, { once: true, amount: 0.5 })
   const controls = useAnimation()
 
+   const containerVariants = {
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.01
+          }
+        }
+      }
+
   const wordVariants = {
     hidden: (i: number) => ({
       opacity: 0,
@@ -106,10 +115,19 @@ export default function SubHeroInfo() {
         )
       })
 
+
       return (
-        <p key={pi} className="mb-5 flex flex-wrap leading-relaxed md:ml-0 ml-2">
-          {animatedWords}
-        </p>
+        <div key={pi} className="mb-5 flex flex-wrap leading-relaxed md:ml-0 ml-2">
+          <motion.p
+            key={pi}
+            className="flex flex-wrap leading-relaxed md:mb-2 mb-0 md:ml-0 ml-2"
+            variants={containerVariants}
+            initial="hidden"
+            animate={controls}
+          >
+            {animatedWords}
+          </motion.p>
+        </div>
       )
     })
   }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function Service() {
   const titleRef = useRef(null);
@@ -20,9 +21,9 @@ export function Service() {
           initial={{ opacity: 0, y: 50 }}
           animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-9xl font-medium leading-none "
+          className="text-4xl md:text-6xl text-left font-medium leading-none "
         >
-          <span className="md:pl-10 pl-2 tracking-tighter">Partnerships</span>
+          <span className="md:pl-10 tracking-tighter">Join the Sport, Play the Game</span>
         </motion.div>
 
         <motion.div
@@ -33,7 +34,7 @@ export function Service() {
           className="text-lg md:text-2xl md:pl-10 pl-3 w-full md:w-[700px] "
         >
           <p>
-            We’re open to partnerships with visionary non-tech founders, content creators, and strong operators.  If you have a compelling idea, a talent for content, or skills in distribution, branding, or tech, let’s talk. We partner on a model that supports co-creation and leadership.
+            {"We’re building a core team of amplified leaders ready to shape the future from day zero. If you're driven by vision, creativity, and execution, Entrext is where your skills turn into real-world impact. Whether you’re a non-technical founder with a powerful idea, a content creator with a voice that moves people, or a strong operator in branding, tech, or distribution we want to build with you. This isn’t a partnership  this is co-creation at the core. A chance to lead, build, and grow with us"}
           </p>
         </motion.div>
       </div>
@@ -50,18 +51,18 @@ export function Service() {
 
         <div className="flex flex-col gap-10">
           <Content
-            title="Partnership with non tech founders"
-            content="If you believe you have an idea, and you come from a non tech background and you got no one, pitch us who knows, maybe we make the product with you and work on a partnership model."
+            title="Non-Tech Founders"
+            content="You’ve got vision but no tech background? Perfect. If your idea is strong, we’ll build with you. Join us as a core founder and let’s bring it to life."
             number={1}
           />
           <Content
-            title="Partnership with Content Creator Marketors"
-            content="If you believe you are great at creating content and want to partner with a product that resonates with you or have an idea for one reach out to us!"
+            title="Content Creators / Marketers"
+            content="You create, storytell, and know how to build attention. If you want to co-lead a product or bring one to life with us, this is your lane."
             number={2}
           />
           <Content
-            title="Partnership as a Leader / Co-founder"
-            content="If you’re strong in distribution, branding, or tech, connect with us. We’re always looking for builders who want to lead the next wave."
+            title="Builders & Operators"
+            content="If you're strong in tech, branding, or distribution, and you're ready to lead from the front, we want you on the core team."
             number={3}
           />
         </div>
@@ -106,10 +107,15 @@ function Content({
   );
 }
 
-function CreativeBtn() {
+function CreativeBtn(){
+  const router = useRouter()
   return (
     <>
-      <div className='group relative cursor-pointer p-2 md:w-32 w-24 border bg-white rounded-full overflow-hidden text-black text-center font-semibold md:text-xl mt-2'>
+      <div
+      onClick={()=>{
+        router.push("https://deformity.ai/d/C-P5znqtG_ZZ")
+      }}
+      className='group relative cursor-pointer p-2 md:w-32 w-24 border bg-white rounded-full overflow-hidden text-black text-center font-semibold md:text-xl mt-2'>
         <span className='translate-x-1 group-hover:translate-x-12 group-hover:opacity-0 transition-all duration-300 inline-block ml-3'>
           Apply
         </span>

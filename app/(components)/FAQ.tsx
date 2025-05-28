@@ -7,19 +7,19 @@ const FAQContent = [
     id: 1,
     title: "What kinds of problems do Entrext products solve?",
     Description:
-      "We build tools and apps that solve real, everyday problems — whether it’s something as small as saving a few minutes a day or as big as creating a new way to connect people. If it improves life in a useful, smart way, we’re interested. We don't chase trends — we focus on things that truly matter to people.",
+      "We build tools and apps that solve real, everyday problems whether it’s something as small as saving a few minutes a day or as big as creating a new way to connect people. If it improves life in a useful, smart way, we’re interested. We don't chase trends, we focus on things that truly matter to people.",
   },
   {
     id: 2,
     title: "Are Entrext products secure and private?",
     Description:
-      "We treat your trust seriously. Everything we build follows best practices around data safety and privacy. But more than rules, we’re a small and tight-knit studio — our goal is never to be extractive. We believe in honest relationships, not just user metrics.",
+      "We treat your trust seriously. Everything we build follows best practices around data safety and privacy. But more than rules, we’re a small and tight-knit studio, our goal is never to be extractive. We believe in honest relationships, not just user metrics.",
   },
   {
     id: 3,
     title: "How do I know a new Entrext app is right for me?",
     Description:
-      "We don’t push products. We co-build them. Every app goes through testing with real users who care about the problem. If you’re part of our early community, your feedback actually shapes what the product becomes — not just some checkbox at the end.",
+      "We don’t push products. We co-build them. Every app goes through testing with real users who care about the problem. If you’re part of our early community, your feedback actually shapes what the product becomes not just some checkbox at the end.",
   },
   {
     id: 4,
@@ -43,13 +43,13 @@ const FAQContent = [
     id: 7,
     title: "What if I encounter a bug or issue?",
     Description:
-      "Reach out to us directly — we don’t hide behind helpdesks. You can message us in the app or through email. We care about what we build, and we fix fast because we believe in learning and improving by doing.",
+      "Reach out to us directly, we don’t hide behind helpdesks. You can message us in the app or through email. We care about what we build, and we fix fast because we believe in learning and improving by doing.",
   },
   {
     id: 8,
     title: "Do Entrext apps integrate with other tools I use?",
     Description:
-      "If it makes your workflow easier, yes. We build things that work well with other services. Whether that’s Slack, Google, or tools you already rely on, we want our products to feel like they belong — not like extra work.",
+      "If it makes your workflow easier, yes. We build things that work well with other services. Whether that’s Slack, Google, or tools you already rely on, we want our products to feel like they belong, not like extra work.",
   },
   {
     id: 9,
@@ -61,7 +61,7 @@ const FAQContent = [
     id: 10,
     title: "Who builds these products and how can I trust their quality?",
     Description:
-      "Everything is built by our in-house team and people we partner with — creators, founders, technologists, and community leaders. We work with people who care deeply about what they build. And since we share ownership and rewards, our success only happens when the product actually works for you.",
+      "Everything is built by our in-house team and people we partner with, creators, founders, technologists, and community leaders. We work with people who care deeply about what they build. And since we share ownership and rewards, our success only happens when the product actually works for you.",
   },
 ];
 

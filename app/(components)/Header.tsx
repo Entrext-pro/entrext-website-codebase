@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -32,7 +31,7 @@ export default function Header() {
           initial={false}
           animate={{ rotate: scrolled ? 360 : 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="md:size-16 size-10 relative cursor-pointer"
+          className="md:size-12 size-10 relative cursor-pointer"
           onClick={()=>{
             router.push("/")
           }}
@@ -47,7 +46,7 @@ export default function Header() {
 
 
         <div className="md:flex gap-32 mr-52 hidden">
-          <Navigate text="Partnerships" onClick={()=> router.push("/partnerships")} />
+          <Navigate text="Join Entrext" onClick={()=> router.push("/partnerships")} />
           {/* <Navigate text="Products" />
           <Navigate text="Culture" /> */}
           <Navigate text="Apply" onClick={() => setApplyModalOpen(true)} />
@@ -80,7 +79,7 @@ export default function Header() {
                 </button>
               </div>
 
-              <NavigateMobile title="Partnerships" onClick={() => {
+              <NavigateMobile title="Join Entrext" onClick={() => {
                   router.push("/partnerships")
                   setMenuOpen(false)
                 }} />
