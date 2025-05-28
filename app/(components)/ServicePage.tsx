@@ -1,5 +1,5 @@
 'use client';
-import Flow from "@/public/extrextPart.png";
+import Flow from "@/public/finalExtrext.png";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";

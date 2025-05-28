@@ -10,7 +10,7 @@ export default function Hero() {
     return (
         <div>
             <div className="md:mt-[90px] mt-[70px] md:h-[600px] h-[100px] overflow-hidden">
-                <div className="text-[50px] sm:text-[180px] md:text-[160px] lg:text-[250px] font-[1000] leading-[1] tracking-tight flex flex-col">
+                <div className="text-[50px] sm:text-[180px] md:text-[160px] lg:text-[220px] font-[1000] leading-[1] tracking-tight flex flex-col">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
