@@ -4,6 +4,8 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { Merienda, Delicious_Handrawn } from "next/font/google"
 import { MarqueeDemo2, MarqueeDemo3, MarqueeDemo4 } from "./CurvedWords";
+import curyImage from "@/public/curve-arrow-below.png"
+import Image from "next/image";
 
 
 const merienda = Merienda({
@@ -74,7 +76,20 @@ export default function SubHero() {
             <div className="md:mt-0 mt-20 md:mb-96 mb-40">
                 <MarqueeDemo2 />
             </div>
-            <div className={`font-mono flex justify-center`}>
+
+           <div className="flex justify-center">
+             <div className="flex items-center">
+                <div className={`${handdrawn.className} md:text-9xl text-5xl mb-5 flex justify-center`}>
+                    Building
+                </div>
+                <Image
+                    src={curyImage}
+                    alt="Curvy"
+                    className="md:size-20 size-10 rotate-45"
+                />
+            </div>
+           </div>
+            <div className={`font-mono flex justify-center rounded-2xl`}>
                 <ComponentEntrext/>
             </div>
         </div>

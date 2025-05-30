@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Entrext",
   description: "Entrext",
+  icons:{
+    icon:"/1.png"
+  }
 };
 
 export default function RootLayout({
