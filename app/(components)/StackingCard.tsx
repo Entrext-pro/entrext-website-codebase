@@ -4,14 +4,16 @@ import { useTransform, motion, useScroll, type MotionValue } from "framer-motion
 import { memo, useRef } from "react";
 import Image from "next/image";
 import { AuroraText } from "@/components/magicui/aurora-text";
+import { Linkedin } from "lucide-react";
 
 const cards = [
   {
     title: "Noa",
-    description: "Matches you with students who can help you study the subjects you're stuck on.",
+    description: "Where prompt chaos meets perfect organization. Turn your best AI inputs into managed, shareable assets, and match user needs with the precise prompt solution.",
     link: "https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop",
     color: "#5196fd",
     website: 'https://noa.entrext.in/',
+    linkedin: 'https://www.linkedin.com/company/noa-entrext/',
   },
   {
     title: "Herth",
@@ -19,13 +21,15 @@ const cards = [
     link: "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60",
     color: "#8f89ff",
     website: 'https://herth.entrext.in/',
+    linkedin: 'https://www.linkedin.com/company/herth-entrext/',
   },
   {
     title: "Friendsin",
-    description: "Friends in is a  college-style tournament game for a specefic amount of time where you and up to 5 friends complete monthly dares. Finish one to unlock the next and climb the leaderboard. Friends, schools, and colleges all compete, top squad wins.",
+    description: " Friends in is a  college-style tournament mobile game for a specific period of time where you and up to 5 friends complete monthly dares together and challenge other teams as well . Finish one to unlock the next and climb the leaderboard. Friends, schools, and colleges all compete, top squad wins.",
     link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
     color: "#4B70F5",
     website: 'https://friendsin.entrext.in',
+    linkedin: 'https://www.linkedin.com/company/friendsin-entrext/',
   },
   {
     title: "Companion ",
@@ -33,6 +37,7 @@ const cards = [
     link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
     color: "#ed649e",
     website: 'https://companion.entrext.in',
+    linkedin: 'https://www.linkedin.com/company/companion-entrext/',
   },
   {
     title: "Access",
@@ -40,6 +45,7 @@ const cards = [
     link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
     color: "#fd521a",
     website: 'http://access.entrext.in',
+    linkedin: 'https://www.linkedin.com/company/access-entrext/',
   }
   /* 
   {
@@ -76,6 +82,7 @@ export default function StackingTextCards() {
                 link={card.link}
                 color={card.color}
                 website={card.website}
+                linkedin={card.linkedin}
                 progress={scrollYProgress}
                 range={[i * 0.25, 1]}
                 targetScale={targetScale}
@@ -95,6 +102,7 @@ interface TextCardProps {
   link: string;
   color: string;
   website?: string;
+  linkedin?: string;
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
@@ -107,6 +115,7 @@ const TextCard = ({
   link,
   color,
   website,
+  linkedin,
   progress,
   range,
   targetScale,
@@ -159,16 +168,33 @@ const TextCard = ({
           </div>
 
           <div className="w-full md:w-1/2 flex flex-col justify-between md:text-left">
-            <motion.h2
-              className="text-3xl sm:text-5xl md:text-5xl xl:text-6xl font-bold leading-tight text-white mb-6 underline underline-offset-8"
+            <motion.div
+              className="flex items-center gap-8 mb-6"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <a href={website} target="_blank" rel="noopener noreferrer">
-                {title}
-              </a>
-            </motion.h2>
+              <h2 className="text-3xl sm:text-5xl md:text-5xl xl:text-6xl font-bold leading-tight text-white underline underline-offset-8">
+                <a 
+                  href={website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-300 hover:scale-105 inline-block transition-all duration-300"
+                >
+                  {title}
+                </a>
+              </h2>
+              {linkedin && (
+                <a 
+                  href={linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-blue-300 transition-colors duration-300"
+                >
+                  <Linkedin size={40} className="sm:w-10 sm:h-10 w-8 h-8" />
+                </a>
+              )}
+            </motion.div>
             <motion.p
               className="text-base sm:text-lg md:text-3xl text-white/90 leading-relaxed"
               initial={{ opacity: 0, x: 50 }}
