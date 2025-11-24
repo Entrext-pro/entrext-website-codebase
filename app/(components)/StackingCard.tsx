@@ -7,41 +7,48 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 
 const cards = [
   {
-    title: "Knowx",
+    title: "Noa",
     description: "Matches you with students who can help you study the subjects you're stuck on.",
     link: "https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop",
     color: "#5196fd",
-  },
-  {
-    title: "Leaderbase",
-    description: "Startups hire experienced tech executives by the hour for guidance.",
-    link: "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60",
-    color: "#8f89ff",
-  },
-  {
-    title: "Friendsin",
-    description: "Dare game where you and friends complete monthly challenges to win a big trip at the end of the year.",
-    link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
-    color: "#4B70F5",
-  },
-  {
-    title: "SecretSanta",
-    description: "Friends anonymously suggest and vote on the perfect present while pooling money.",
-    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
-    color: "#ed649e",
+    website: 'https://noa.entrext.in/',
   },
   {
     title: "Herth",
-    description: "Women sell their handmade goods and support each other globally.",
+    description: "Herth is a community-driven social commerce platform empowering women entrepreneurs across India. Grow your business, share your story, and thrive together.",
+    link: "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60",
+    color: "#8f89ff",
+    website: 'https://herth.entrext.in/',
+  },
+  {
+    title: "Friendsin",
+    description: "Friends in is a  college-style tournament game for a specefic amount of time where you and up to 5 friends complete monthly dares. Finish one to unlock the next and climb the leaderboard. Friends, schools, and colleges all compete, top squad wins.",
+    link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
+    color: "#4B70F5",
+    website: 'https://friendsin.entrext.in',
+  },
+  {
+    title: "Companion ",
+    description: "Companion is a moment-based matching app where people connect through shared experiences, not profiles using four modes (Date, Friend, Group, Business) to meet others who want the same real-life moment.",
+    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
+    color: "#ed649e",
+    website: 'https://companion.entrext.in',
+  },
+  {
+    title: "Access",
+    description: "Access is a platform that lets people share and access items they need without owning them by turning unused things into community resources you can instantly borrow when needed.",
     link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
     color: "#fd521a",
-  },
+    website: 'http://access.entrext.in',
+  }
+  /* 
   {
     title: "Borrowd",
     description: "Platform to rent out your unused stuff or borrow what you need.",
     link: "https://images.unsplash.com/photo-1625834384234-fd4eb7fe121f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     color:"#67AE6E",
   }
+    */
 ];
 
 export default function StackingTextCards() {
@@ -68,6 +75,7 @@ export default function StackingTextCards() {
                 description={card.description}
                 link={card.link}
                 color={card.color}
+                website={card.website}
                 progress={scrollYProgress}
                 range={[i * 0.25, 1]}
                 targetScale={targetScale}
@@ -86,6 +94,7 @@ interface TextCardProps {
   description: string;
   link: string;
   color: string;
+  website?: string;
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
@@ -97,6 +106,7 @@ const TextCard = ({
   description,
   link,
   color,
+  website,
   progress,
   range,
   targetScale,
@@ -155,7 +165,9 @@ const TextCard = ({
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              {title}
+              <a href={website} target="_blank" rel="noopener noreferrer">
+                {title}
+              </a>
             </motion.h2>
             <motion.p
               className="text-base sm:text-lg md:text-3xl text-white/90 leading-relaxed"
