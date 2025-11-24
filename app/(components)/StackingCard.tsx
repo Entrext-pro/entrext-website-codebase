@@ -4,7 +4,7 @@ import { useTransform, motion, useScroll, type MotionValue } from "framer-motion
 import { memo, useRef } from "react";
 import Image from "next/image";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { Linkedin } from "lucide-react";
+import { IconBrandLinkedinFilled } from "@tabler/icons-react";
 
 const cards = [
   {
@@ -191,7 +191,7 @@ const TextCard = ({
                   rel="noopener noreferrer"
                   className="text-white hover:text-blue-300 transition-colors duration-300"
                 >
-                  <Linkedin size={40} className="sm:w-10 sm:h-10 w-8 h-8" />
+                  <IconBrandLinkedinFilled size={40} className="sm:w-10 sm:h-10 w-8 h-8" />
                 </a>
               )}
             </motion.div>
