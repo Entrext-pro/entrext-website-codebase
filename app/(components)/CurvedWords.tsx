@@ -116,11 +116,11 @@ export function MarqueeDemo2() {
 }
 
 const texts = [
-    "Extrext",
-    "Extrext",
-    "Extrext",
-    "Extrext",
-    "Extrext",
+    "Entrext",
+    "Entrext",
+    "Entrext",
+    "Entrext",
+    "Entrext",
 ]
 
 const ReviewCard2 = ({
