@@ -40,12 +40,12 @@ const cards = [
     linkedin: 'https://www.linkedin.com/company/companion-entrext/',
   },
   {
-    title: "Access",
-    description: "Access is a platform that lets people share and access items they need without owning them by turning unused things into community resources you can instantly borrow when needed.",
+    title: "Know",
+    description: "An AI-powered matchmaking platform where you swipe right to find your ideal co-founder, tech builder, or growth partner !!",
     link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
     color: "#fd521a",
-    website: 'http://access.entrext.in',
-    linkedin: 'https://www.linkedin.com/company/access-entrext/',
+    website: 'http://now.entrext.in',
+    linkedin: 'https://www.linkedin.com/company/knowx-entrext/',
   }
   /* 
   {

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { RetroGridDemo } from "./RetroGridDemo"
 import { motion } from "framer-motion"
+import DiscordCommunity from "./DiscordCommunity"
 
 export default function Hero() {
   const isMobile = useIsMobile()
@@ -15,6 +16,9 @@ export default function Hero() {
           <AnimatedText text="THE NEXT ERA" delay={0.7} className="" />
         </div>
       </div>
+
+      {/* Discord Community Section */}
+      <DiscordCommunity />
 
       <div className="relative overflow-hidden w-full h-[400px] lg:h-[800px] md:mb-0 mb-32">
         <RetroGridDemo />
