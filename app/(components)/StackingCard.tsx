@@ -40,11 +40,11 @@ const cards = [
     linkedin: 'https://www.linkedin.com/company/companion-entrext/',
   },
   {
-    title: "Know",
+    title: "KnowX",
     description: "An AI-powered matchmaking platform where you swipe right to find your ideal co-founder, tech builder, or growth partner !!",
     link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
     color: "#fd521a",
-    website: 'http://now.entrext.in',
+    website: 'https://knowx.entrext.in/',
     linkedin: 'https://www.linkedin.com/company/knowx-entrext/',
   }
   /* 

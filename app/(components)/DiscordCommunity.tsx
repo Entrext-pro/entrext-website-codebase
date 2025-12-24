@@ -59,7 +59,7 @@ export default function DiscordCommunity() {
           </div>
           <div className="border-2 border-black rounded-full px-6 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
             <a
-              href="https://discord.gg/entrex"
+              href="https://discord.gg/fUCDZyS5"
               target="_blank"
               rel="noopener noreferrer"
               className="md:text-base text-sm font-[500] uppercase"
