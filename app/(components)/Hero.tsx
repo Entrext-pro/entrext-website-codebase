@@ -10,8 +10,8 @@ export default function Hero() {
 
   return (
     <div>
-      <div className="md:mt-[90px] mt-[70px] md:h-[600px] h-[100px] overflow-hidden">
-        <div className="text-[50px] sm:text-[180px] md:text-[160px] lg:text-[200px] font-[1000] leading-[1] tracking-tight flex flex-col">
+      <div className="md:mt-[90px] mt-[70px] md:h-[600px] h-auto min-h-[150px] overflow-hidden">
+        <div className="text-[50px] sm:text-[180px] md:text-[160px] lg:text-[200px] font-[1000] leading-[0.9] md:leading-[1] tracking-tight flex flex-col">
           <AnimatedText text="ENTREPRENEUR'S" delay={0} className="" />
           <AnimatedText text="NEXT" delay={0.7} className="" />
         </div>
